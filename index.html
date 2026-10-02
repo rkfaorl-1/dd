@@ -1,14 +1,65 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Set — Dorm Room</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Three.js from a CDN via an import map: no build step, no npm install.
+         For offline use see README ("Running offline"). -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <main id="stage-area">
+        <!-- Always 16:9. Only the canvas is recorded; the HUD and guides are HTML overlays. -->
+        <div id="viewport">
+          <canvas id="canvas" aria-label="3D story set viewport"></canvas>
+          <div id="guides" aria-hidden="true">
+            <div class="third v1"></div>
+            <div class="third v2"></div>
+            <div class="third h1"></div>
+            <div class="third h2"></div>
+            <div class="safe"></div>
+          </div>
+          <div id="hud"></div>
+        </div>
+        <button id="show-ui" type="button" hidden>Show UI (H)</button>
+        <div id="loading">Building the set…</div>
+      </main>
+      <aside id="panel" aria-label="Controls">
+        <header class="panel-header">
+          <h1>Story Set</h1>
+          <p id="set-name"></p>
+        </header>
+      </aside>
+    </div>
+
+    <div id="fatal" hidden>
+      <h2>Could not start the story set</h2>
+      <p id="fatal-message"></p>
+      <p class="hint">
+        Serve the folder over HTTP (for example <code>python3 -m http.server 8000</code>) and open
+        <code>http://localhost:8000</code>. Opening <code>index.html</code> directly from disk does not work, and Three.js is
+        loaded from cdn.jsdelivr.net (see README for offline use).
+      </p>
+    </div>
+
+    <script>
+      // Shown if the module graph (main.js or Three.js from the CDN) fails to load.
+      function showFatal(message) {
+        document.getElementById('loading')?.remove();
+        document.getElementById('fatal-message').textContent = message;
+        document.getElementById('fatal').hidden = false;
+      }
+    </script>
+    <script type="module" src="main.js" onerror="showFatal('A script failed to load (no internet connection to the Three.js CDN?).')"></script>
+  </body>
 </html>

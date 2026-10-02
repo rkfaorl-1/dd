@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placeholder Characters</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #1a1a1d;
+        color: #ddd;
+        font: 14px system-ui, sans-serif;
+      }
+      .figures {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: flex-end;
+      }
+      figure {
+        margin: 0;
+        text-align: center;
+      }
+      canvas {
+        height: 320px;
+        background: repeating-conic-gradient(#2a2a2e 0% 25%, #222226 0% 50%) 50% / 20px 20px;
+      }
+      a {
+        color: #d8a74a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Placeholder character PNGs</h1>
+    <p>
+      Renders the placeholder figures used in <code>assets/characters/</code>. Click a link to download a PNG. Your own art
+      should follow the same convention: transparent background, figure fills the full height, feet on the bottom edge.
+    </p>
+    <div class="figures" id="figures"></div>
+    <script type="module">
+      import { drawFigure } from '../src/lib/placeholderFigure.js';
+
+      const files = [
+        ['narrator_standing.png', 'standing', 'A'],
+        ['narrator_seated.png', 'seated', 'A'],
+        ['roommate_standing.png', 'standing', 'B'],
+        ['roommate_seated.png', 'seated', 'B'],
+      ];
+      const root = document.getElementById('figures');
+      for (const [name, pose, style] of files) {
+        const canvas = drawFigure(document.createElement('canvas'), pose, style);
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = name;
+        link.textContent = name;
+        const figure = document.createElement('figure');
+        figure.append(canvas, document.createElement('br'), link);
+        root.append(figure);
+      }
+      window.placeholderData = files.map(([name, pose, style]) => [name, drawFigure(document.createElement('canvas'), pose, style).toDataURL('image/png')]);
+    </script>
+  </body>
+</html>
