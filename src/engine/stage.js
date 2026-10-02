@@ -94,8 +94,9 @@ export class StoryStage extends EventTarget {
 
   _frame(timestamp) {
     this.timer.update(timestamp);
-    const dt = Math.min(this.timer.getDelta(), 1 / 15);
-    if (dt > 0) this.fps += (1 / dt - this.fps) * 0.05;
+    const raw = this.timer.getDelta();
+    if (raw > 0) this.fps += (1 / raw - this.fps) * 0.05;
+    const dt = Math.min(raw, 1 / 15); // avoid huge jumps after a stall
     this.update(dt);
     this.render();
   }
@@ -119,6 +120,7 @@ export class StoryStage extends EventTarget {
   /** Draw the current state. */
   render() {
     this.post.render();
+    this.recorder.captureFrame();
     for (const fn of this.frameListeners) fn(this);
   }
 
@@ -266,6 +268,8 @@ export class StoryStage extends EventTarget {
     if (blob && blob.size) {
       Recorder.download(blob, `${this.setDef.id}`);
       this._emit('message', { text: `Saved ${(blob.size / 1e6).toFixed(1)} MB video` });
+    } else if (blob) {
+      this._emit('message', { text: 'Recording was empty - keep the tab visible while recording.', level: 'error' });
     }
   }
 

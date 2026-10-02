@@ -43,7 +43,18 @@ export class Recorder extends EventTarget {
     if (!Recorder.isSupported()) throw new Error('MediaRecorder / canvas.captureStream is not supported in this browser.');
     if (this.recording) return;
     this.mimeType = Recorder.pickMimeType();
-    this.stream = this.canvas.captureStream(fps);
+    // Frames are pushed explicitly after each render (see captureFrame) instead of letting
+    // the browser sample the canvas: every recorded frame is a fully rendered one, and it
+    // also works where automatic canvas sampling delivers nothing.
+    this.fps = fps;
+    this.lastFrameAt = -Infinity;
+    this.stream = this.canvas.captureStream(0);
+    this.track = this.stream.getVideoTracks()[0];
+    if (typeof this.track?.requestFrame !== 'function') {
+      this.stream.getTracks().forEach((t) => t.stop());
+      this.stream = this.canvas.captureStream(fps);
+      this.track = null;
+    }
     const options = { videoBitsPerSecond: bitrate };
     if (this.mimeType) options.mimeType = this.mimeType;
     this.mediaRecorder = new MediaRecorder(this.stream, options);
@@ -56,6 +67,15 @@ export class Recorder extends EventTarget {
     this.dispatchEvent(new CustomEvent('start'));
   }
 
+  /** Call right after the canvas has been rendered; pushes a frame at most `fps` times a second. */
+  captureFrame() {
+    if (!this.track || !this.recording) return;
+    const now = performance.now();
+    if (now - this.lastFrameAt < 1000 / this.fps - 2) return;
+    this.lastFrameAt = now;
+    this.track.requestFrame();
+  }
+
   /** Stop and resolve with the recorded Blob (or null if nothing was recording). */
   stop() {
     if (!this.mediaRecorder || this.mediaRecorder.state === 'inactive') return Promise.resolve(null);
@@ -66,6 +86,7 @@ export class Recorder extends EventTarget {
         const blob = new Blob(this.chunks, { type: type.split(';')[0] });
         this.stream.getTracks().forEach((t) => t.stop());
         this.mediaRecorder = null;
+        this.track = null;
         this.chunks = [];
         this.dispatchEvent(new CustomEvent('stop', { detail: { blob } }));
         resolve(blob);

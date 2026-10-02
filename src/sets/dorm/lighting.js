@@ -12,7 +12,7 @@
 import * as THREE from 'three';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 import { hash1, smoothNoise1 } from '../../lib/noise.js';
-import { ROOM, WINDOW, DOOR } from './layout.js';
+import { ROOM, WINDOW } from './layout.js';
 
 /** Physical intensity at dimmer = 1 (candela for point/spot lights). */
 const LAMP_COLOR = new THREE.Color('#ffc98a');
@@ -335,9 +335,4 @@ export function buildLightRig(scene, handles, { invalidateShadows }) {
   }
 
   return { lights, apply };
-}
-
-/** Door openness helper for presets / UI (0 = closed, 1 = fully open). */
-export function doorOpenAmount(angleDeg) {
-  return THREE.MathUtils.clamp(angleDeg / DOOR.states.open, 0, 1);
 }

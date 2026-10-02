@@ -6,7 +6,7 @@
  * the footprints in layout.js.
  */
 import * as THREE from 'three';
-import { boxFromBounds, boxOnFloor, applyWorldUVs, softBox, drapedCloth } from '../../lib/geometry.js';
+import { boxFromBounds, applyWorldUVs, softBox, drapedCloth } from '../../lib/geometry.js';
 import { clockTexture, laptopScreenTexture, posterTexture, calendarTexture, corkboardTexture, rugTexture } from '../../lib/textures.js';
 import { mulberry32 } from '../../lib/noise.js';
 import { FURNITURE as F, BED_DECK_HEIGHT, MATTRESS_THICKNESS, ROOM } from './layout.js';

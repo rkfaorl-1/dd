@@ -17,16 +17,6 @@ export function boxFromBounds(x0, x1, y0, y1, z0, z1, material, { cast = true, r
   return mesh;
 }
 
-/** Box from size; origin at the bottom centre (handy for furniture parts). */
-export function boxOnFloor(w, h, d, material, { cast = true, receive = true } = {}) {
-  const geometry = new THREE.BoxGeometry(w, h, d);
-  geometry.translate(0, h / 2, 0);
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.castShadow = cast;
-  mesh.receiveShadow = receive;
-  return mesh;
-}
-
 /**
  * Planar "box projection" UVs in world space, so tiled textures (CMU block,
  * carpet, wood grain) keep a constant real-world scale on every piece.
@@ -186,33 +176,4 @@ export function drapedCloth({ width, length, drop, footDrop = drop, rumple = 0.0
   }
   geometry.computeVertexNormals();
   return geometry;
-}
-
-/** Merge child meshes that share a material into one mesh per material (fewer draw calls). */
-export function mergeByMaterial(group, mergeGeometries) {
-  group.updateMatrixWorld(true);
-  const buckets = new Map();
-  const keep = [];
-  group.traverse((obj) => {
-    if (!obj.isMesh || obj.userData.noMerge) return;
-    const key = obj.material.uuid + (obj.castShadow ? 'c' : '') + (obj.receiveShadow ? 'r' : '');
-    if (!buckets.has(key)) buckets.set(key, { material: obj.material, cast: obj.castShadow, receive: obj.receiveShadow, geos: [] });
-    const g = obj.geometry.clone().applyMatrix4(obj.matrixWorld);
-    // Normalise attribute sets so geometries can merge.
-    for (const name of Object.keys(g.attributes)) {
-      if (!['position', 'normal', 'uv'].includes(name)) g.deleteAttribute(name);
-    }
-    if (!g.attributes.uv) g.setAttribute('uv', new THREE.BufferAttribute(new Float32Array(g.attributes.position.count * 2), 2));
-    buckets.get(key).geos.push(g.index ? g.toNonIndexed() : g);
-    keep.push(obj);
-  });
-  const merged = new THREE.Group();
-  for (const { material, cast, receive, geos } of buckets.values()) {
-    const geometry = mergeGeometries(geos, false);
-    const mesh = new THREE.Mesh(geometry, material);
-    mesh.castShadow = cast;
-    mesh.receiveShadow = receive;
-    merged.add(mesh);
-  }
-  return { merged, sourceMeshes: keep };
 }

@@ -446,9 +446,24 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
   }
 
   // ---------------------------------------------------------------- Keyboard
+  // After a mouse/touch interaction with a panel control, give focus back to the page so
+  // shortcuts keep working (keyboard-only users keep their focus: no pointer event).
+  panel.addEventListener('pointerup', () => {
+    requestAnimationFrame(() => {
+      const active = document.activeElement;
+      if (active && active.matches('button, input[type="checkbox"], input[type="range"]')) active.blur();
+    });
+  });
+
+  const NON_TEXT_INPUTS = ['checkbox', 'radio', 'range', 'button', 'file', 'color'];
   window.addEventListener('keydown', (e) => {
-    const tag = e.target.tagName;
-    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target;
+    const typing =
+      t.isContentEditable || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || (t.tagName === 'INPUT' && !NON_TEXT_INPUTS.includes(t.type));
+    if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
+    // Space / Enter on a focused button or checkbox should just activate that control.
+    const activatable = t.tagName === 'BUTTON' || (t.tagName === 'INPUT' && t.type !== 'range');
+    if (activatable && (e.key === ' ' || e.key === 'Enter')) return;
     const digit = e.code.startsWith('Digit') ? Number(e.code.slice(5)) : NaN;
     if (!Number.isNaN(digit) && digit >= 1) {
       if (e.shiftKey) {
