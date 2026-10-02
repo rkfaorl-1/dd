@@ -306,9 +306,8 @@ body {
   text-transform: uppercase;
 }
 
-.panel-header p {
-  margin: 2px 0 0;
-  color: var(--muted);
+.panel-header select {
+  margin-top: 8px;
 }
 
 .panel-section {

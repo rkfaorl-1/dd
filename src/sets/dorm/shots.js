@@ -11,6 +11,9 @@
  *   roll       (optional) dutch angle in degrees
  *   duration   seconds
  *   easing     name from engine/easing.js
+ *   shift      (optional) [x, y] lens shift as a fraction of the frame - keeps verticals straight
+ *              while moving the horizon (y > 0 shows more floor, x < 0 shows more of the left)
+ *   insert     (optional) true = listed under "Inserts" in the panel
  *   requires   (optional) set state the shot needs, e.g. { door: 'open' } to dolly through the doorway
  *
  * Tip: switch on "Debug orbit", frame something, then use "Copy camera pose"
@@ -118,6 +121,7 @@ export const SHOTS = [
   // --- Extra coverage (inserts) ---
   {
     id: 'I',
+    insert: true,
     name: 'Light switch (insert)',
     description: 'Close insert on the light switch by the entrance.',
     startPos: [0.42, 1.32, -0.55],
@@ -129,6 +133,7 @@ export const SHOTS = [
   },
   {
     id: 'J',
+    insert: true,
     name: 'Under the door',
     description: 'Floor-level view of the gap under the door.',
     startPos: [0.4, 0.1, -1.7],
@@ -140,6 +145,7 @@ export const SHOTS = [
   },
   {
     id: 'K',
+    insert: true,
     name: 'Desk POV',
     description: "Narrator's point of view at the desk: laptop and lamp. Hide the narrator cutout for this one.",
     startPos: [-0.86, 1.24, -1.2],
@@ -151,6 +157,7 @@ export const SHOTS = [
   },
   {
     id: 'L',
+    insert: true,
     name: 'Bed close',
     description: "Close on the roommate's bed from the foot of the room.",
     startPos: [0.2, 1.15, -3.0],
@@ -162,6 +169,7 @@ export const SHOTS = [
   },
   {
     id: 'M',
+    insert: true,
     name: 'Desk from the room',
     description: 'From the middle of the room toward the narrator at the desk.',
     startPos: [0.45, 1.45, -2.25],

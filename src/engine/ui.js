@@ -73,8 +73,8 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
     shotButtons.set(s.id, b);
     return b;
   };
-  const mainShots = set.shots.slice(0, 8);
-  const extraShots = set.shots.slice(8);
+  const mainShots = set.shots.filter((s) => !s.insert);
+  const extraShots = set.shots.filter((s) => s.insert);
   const loopBox = h('input', { type: 'checkbox', onchange: (e) => stage.setLoopShot(e.target.checked) });
   const handheld = segmented(
     [
@@ -328,7 +328,7 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
         'dl',
         { class: 'keys' },
         ...[
-          ['1 – 9', 'shots A – I'],
+          ['1 – 9', 'shots in list order'],
           ['Shift + 1 – 6', 'lighting presets'],
           ['Enter', 'replay shot'],
           ['Space', 'play / stop storyboard'],
@@ -444,7 +444,8 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
 
   async function copyPose() {
     const p = stage.director.currentPose();
-    const text = `startPos: [${p.position.join(', ')}],\nendPos: [${p.position.join(', ')}],\ntarget: [${p.target.join(', ')}],\nlens: ${p.lens},`;
+    let text = `startPos: [${p.position.join(', ')}],\nendPos: [${p.position.join(', ')}],\ntarget: [${p.target.join(', ')}],\nlens: ${p.lens},`;
+    if (p.shift) text += `\nshift: [${p.shift.join(', ')}],`;
     try {
       await navigator.clipboard.writeText(text);
       toast('Camera pose copied to clipboard');

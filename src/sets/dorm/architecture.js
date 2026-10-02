@@ -13,15 +13,14 @@ import {
   CMU_TILE,
   VCT_TILE,
   ceilingTileTexture,
-  edgeFadeTexture,
   labelTexture,
   corkboardTexture,
   facadeTextures,
   treeTexture,
   makeCanvas,
   canvasTexture,
-  softRect,
 } from '../../lib/textures.js';
+import { addCornerShading, floorShading } from '../../lib/shading.js';
 import { ROOM, DOOR, WINDOW, SWITCH, HALL, HALL_DOORS, FURNITURE } from './layout.js';
 
 const WALL_TOP = ROOM.height;
@@ -89,154 +88,46 @@ function buildRoomShell(M, add) {
 
 /** Darkening strips where walls meet floor/ceiling and in vertical corners (fake ambient occlusion). */
 function buildCornerShading(root) {
-  const fade = edgeFadeTexture();
-  const material = new THREE.MeshBasicMaterial({
-    color: 0x000000,
-    alphaMap: fade,
-    transparent: true,
-    opacity: 0.38,
-    depthWrite: false,
-    polygonOffset: true,
-    polygonOffsetFactor: -2,
-    polygonOffsetUnits: -2,
-  });
-  const ceilingMaterial = material.clone();
-  ceilingMaterial.opacity = 0.22;
-
-  const { x0, x1, z0, z1 } = ROOM;
-  const W = x1 - x0, D = z0 - z1;
-  const strip = (width, height, mat) => new THREE.Mesh(new THREE.PlaneGeometry(width, height), mat);
-  const off = 0.003;
-
-  // Each wall: [center x, center z, yaw, length]
-  const walls = [
-    [(x0 + x1) / 2, z1 + off, 0, W], // window wall, facing +z
-    [(x0 + x1) / 2, z0 - off, Math.PI, W], // entrance wall, facing -z
-    [x0 + off, (z0 + z1) / 2, Math.PI / 2, D], // left wall, facing +x
-    [x1 - off, (z0 + z1) / 2, -Math.PI / 2, D], // right wall, facing -x
-  ];
-  for (const [cx, cz, yaw, len] of walls) {
-    const floorStrip = strip(len, 0.32, material);
-    floorStrip.position.set(cx, 0.16, cz);
-    floorStrip.rotation.y = yaw;
-    root.add(floorStrip);
-
-    const ceilStrip = strip(len, 0.26, ceilingMaterial);
-    ceilStrip.position.set(cx, WALL_TOP - 0.13, cz);
-    ceilStrip.rotation.set(0, yaw, 0);
-    ceilStrip.rotateZ(Math.PI); // gradient dark at the top edge
-    root.add(ceilStrip);
-  }
-
-  // Vertical room corners.
-  const cornerMat = material.clone();
-  cornerMat.opacity = 0.26;
-  const corners = [
-    [x0, z1, 1, 1],
-    [x1, z1, -1, 1],
-    [x0, z0, 1, -1],
-    [x1, z0, -1, -1],
-  ];
-  for (const [cx, cz, sx, sz] of corners) {
-    for (const along of ['x', 'z']) {
-      const s = strip(WALL_TOP, 0.22, cornerMat);
-      if (along === 'x') {
-        // Strip on the wall perpendicular to Z, fading away from the corner along X.
-        s.rotation.set(0, sz > 0 ? 0 : Math.PI, sx * sz > 0 ? -Math.PI / 2 : Math.PI / 2);
-        s.position.set(cx + sx * 0.11, WALL_TOP / 2, cz + sz * off);
-      } else {
-        s.rotation.set(0, sx > 0 ? Math.PI / 2 : -Math.PI / 2, sx * sz > 0 ? Math.PI / 2 : -Math.PI / 2);
-        s.position.set(cx + sx * off, WALL_TOP / 2, cz + sz * 0.11);
-      }
-      root.add(s);
-    }
-  }
+  addCornerShading(root, { ...ROOM, height: WALL_TOP });
 }
 
 /**
  * Baked floor shading: soft contact shadows under furniture, grime along the
- * walls and a darker traffic path from the door. Painted into one canvas
- * (white = darker) and laid over the carpet as a transparent decal.
+ * walls and a darker traffic path from the door.
  */
 function buildFloorShading(root) {
-  const { x0, x1, z0, z1 } = ROOM;
-  const PX = 160; // pixels per meter
-  const W = Math.round((x1 - x0) * PX), H = Math.round((z0 - z1) * PX);
-  const canvas = makeCanvas(W, H);
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = '#000';
-  ctx.fillRect(0, 0, W, H);
-  // Map world (x, z) -> canvas pixels. Canvas top (y=0) is the window wall.
-  const px = (x) => (x - x0) * PX;
-  const pz = (z) => (z - z1) * PX;
-
-  // Grime along the walls.
-  ctx.strokeStyle = 'rgba(255,255,255,0.35)';
-  softRect(ctx, 0, 0, W, 14, 18, 'rgba(255,255,255,0.35)');
-  softRect(ctx, 0, H - 14, W, 14, 18, 'rgba(255,255,255,0.35)');
-  softRect(ctx, 0, 0, 14, H, 18, 'rgba(255,255,255,0.35)');
-  softRect(ctx, W - 14, 0, 14, H, 18, 'rgba(255,255,255,0.35)');
-
+  const shade = floorShading(ROOM);
   // Traffic path: door -> centre of the room -> both desks.
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = 'rgba(255,255,255,0.10)';
-  ctx.shadowColor = 'rgba(255,255,255,0.10)';
-  ctx.shadowBlur = 40;
-  ctx.lineWidth = 0.55 * PX;
-  ctx.beginPath();
-  ctx.moveTo(px(0.86), pz(0));
-  ctx.quadraticCurveTo(px(0.4), pz(-1.6), px(0.1), pz(-3.2));
-  ctx.lineTo(px(0.05), pz(-4.1));
-  ctx.moveTo(px(0.7), pz(-0.7));
-  ctx.lineTo(px(-0.85), pz(-1.15));
-  ctx.stroke();
-  ctx.shadowBlur = 0;
-
-  // Contact shadows under furniture footprints.
-  const footprint = (f, strength = 0.6, blur = 26, inset = 0) => {
-    const xa = px(Math.min(f.x0, f.x1)) + inset, xb = px(Math.max(f.x0, f.x1)) - inset;
-    const za = pz(Math.min(f.z0, f.z1)) + inset, zb = pz(Math.max(f.z0, f.z1)) - inset;
-    softRect(ctx, xa, za, xb - xa, zb - za, blur, `rgba(255,255,255,${strength})`);
-  };
-  footprint(FURNITURE.narratorDesk, 0.45, 30);
-  footprint(FURNITURE.fridge, 0.7, 16);
-  footprint(FURNITURE.narratorWardrobe, 0.75, 18);
-  footprint(FURNITURE.roommateWardrobe, 0.75, 18);
-  footprint(FURNITURE.roommateDresser, 0.7, 16);
-  footprint(FURNITURE.narratorBed, 0.62, 34, 6);
-  footprint(FURNITURE.roommateBed, 0.7, 34, 6);
-  footprint(FURNITURE.roommateDesk, 0.45, 30);
-  const blob = (x, z, r, a) => {
-    const g = ctx.createRadialGradient(px(x), pz(z), 0, px(x), pz(z), r * PX);
-    g.addColorStop(0, `rgba(255,255,255,${a})`);
-    g.addColorStop(1, 'rgba(255,255,255,0)');
-    ctx.fillStyle = g;
-    ctx.fillRect(px(x) - r * PX, pz(z) - r * PX, r * 2 * PX, r * 2 * PX);
-  };
-  blob(FURNITURE.narratorChair.x, FURNITURE.narratorChair.z, 0.36, 0.35);
-  blob(FURNITURE.roommateChair.x, FURNITURE.roommateChair.z, 0.36, 0.35);
-  blob(FURNITURE.hamper.x, FURNITURE.hamper.z, 0.28, 0.5);
-  blob(FURNITURE.trash.x, FURNITURE.trash.z, 0.22, 0.45);
-  // A couple of old stains near the narrator's desk.
-  blob(-0.7, -1.55, 0.07, 0.12);
-  blob(-0.55, -1.4, 0.04, 0.1);
-
-  const texture = canvasTexture(canvas, { color: false, repeat: false });
-  const material = new THREE.MeshBasicMaterial({
-    color: 0x000000,
-    alphaMap: texture,
-    transparent: true,
-    opacity: 0.85,
-    depthWrite: false,
-    polygonOffset: true,
-    polygonOffsetFactor: -2,
-    polygonOffsetUnits: -2,
+  shade.draw((ctx, px, pz, PX) => {
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = 'rgba(255,255,255,0.10)';
+    ctx.shadowColor = 'rgba(255,255,255,0.10)';
+    ctx.shadowBlur = 40;
+    ctx.lineWidth = 0.55 * PX;
+    ctx.beginPath();
+    ctx.moveTo(px(0.86), pz(0));
+    ctx.quadraticCurveTo(px(0.4), pz(-1.6), px(0.1), pz(-3.2));
+    ctx.lineTo(px(0.05), pz(-4.1));
+    ctx.moveTo(px(0.7), pz(-0.7));
+    ctx.lineTo(px(-0.85), pz(-1.15));
+    ctx.stroke();
   });
-  const decal = new THREE.Mesh(new THREE.PlaneGeometry(x1 - x0, z0 - z1), material);
-  decal.rotation.x = -Math.PI / 2;
-  // PlaneGeometry v=1 is +Y before rotation -> -Z after rotation, which is the window wall (canvas top).
-  decal.position.set((x0 + x1) / 2, 0.002, (z0 + z1) / 2);
-  root.add(decal);
+  shade.footprint(FURNITURE.narratorDesk, 0.45, 30);
+  shade.footprint(FURNITURE.fridge, 0.7, 16);
+  shade.footprint(FURNITURE.narratorWardrobe, 0.75, 18);
+  shade.footprint(FURNITURE.roommateWardrobe, 0.75, 18);
+  shade.footprint(FURNITURE.roommateDresser, 0.7, 16);
+  shade.footprint(FURNITURE.narratorBed, 0.62, 34, 6);
+  shade.footprint(FURNITURE.roommateBed, 0.7, 34, 6);
+  shade.footprint(FURNITURE.roommateDesk, 0.45, 30);
+  shade.blob(FURNITURE.narratorChair.x, FURNITURE.narratorChair.z, 0.36, 0.35);
+  shade.blob(FURNITURE.roommateChair.x, FURNITURE.roommateChair.z, 0.36, 0.35);
+  shade.blob(FURNITURE.hamper.x, FURNITURE.hamper.z, 0.28, 0.5);
+  shade.blob(FURNITURE.trash.x, FURNITURE.trash.z, 0.22, 0.45);
+  // A couple of old stains near the narrator's desk.
+  shade.blob(-0.7, -1.55, 0.07, 0.12);
+  shade.blob(-0.55, -1.4, 0.04, 0.1);
+  shade.build(root);
 }
 
 // ---------------------------------------------------------------------------

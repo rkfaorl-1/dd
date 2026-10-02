@@ -6,6 +6,16 @@ It is not a game. It is one reusable, filmable environment — an ordinary share
 American college dormitory — with a camera director, lighting moods, 2D character cutouts and a
 storyboard player, so you can block and record many narration shots from the same set.
 
+## Sets
+
+Two dorm rooms share the same engine. Switch with the drop-down at the top of the panel, or with
+the URL hash:
+
+| Set | URL | What it is |
+| --- | --- | --- |
+| **Dorm room — reference look** (default) | `#dorm-ref` | Rebuilt from a reference image: 12 ft × 20 ft room seen from just inside the door — light switch and dark steel frame on the left, open door with lever lock on the right, desks, raised wooden beds, free-standing wardrobe, window with pines and a building across the lawn, ceiling dome light. Shot **R** reproduces the reference framing. |
+| **Shared double dorm** | `#dorm-double` | The original set: cinder-block walls, two wardrobes, dresser, mini-fridge, roommate's bed behind a wardrobe divider. |
+
 ## Run it locally
 
 No build step and no `npm install`. Serve the folder over HTTP and open it in a current desktop
@@ -59,7 +69,7 @@ The HUD (shot name, lens, lighting, REC, storyboard note) and the panel are HTML
 
 | Key | Action |
 | --- | --- |
-| `1` – `9` | Play shots A – I |
+| `1` – `9` | Play the first nine shots of the current set, in list order |
 | `Shift` + `1` – `6` | Lighting presets |
 | `Enter` | Replay current shot |
 | `Space` | Play / stop the selected storyboard |
@@ -71,6 +81,13 @@ The HUD (shot name, lens, lighting, REC, storyboard note) and the panel are HTML
 | `C` | Copy camera pose (in debug orbit) |
 
 ### Shot presets
+
+**Reference look** (`#dorm-ref`): **R** reference framing (20 mm, lens shift, matches the image),
+**A–H** as below (D/E use the wardrobe to hide the right bed), inserts **I** light switch,
+**J** under the bed, **K** desk close, **L** window close. Lighting: *Night · ceiling light*
+(the reference look), *Night · lights off*, *Day*, *Overcast*, *Evening*, *Flicker test*.
+
+**Shared double** (`#dorm-double`):
 
 | Id | Shot | Notes |
 | --- | --- | --- |
@@ -84,7 +101,7 @@ The HUD (shot name, lens, lighting, REC, storyboard note) and the panel are HTML
 | H | Window → back | From the window back toward the door |
 | I–M | Inserts | Light switch, under the door, desk POV, bed close, desk from the room |
 
-### Lighting presets
+### Lighting presets (shared double)
 
 | Preset | Look |
 | --- | --- |
@@ -185,7 +202,9 @@ src/
     sequencePlayer.js          storyboard player
     recorder.js                MediaRecorder canvas capture
     ui.js                      control panel, HUD, keyboard shortcuts
-  sets/dorm/                   everything specific to this environment
+  sets/dormRef/                the reference-look room (default set), same file layout as sets/dorm/
+    layout.js                  dimensions measured from the reference + REFERENCE_CAMERA pose
+  sets/dorm/                   the original shared double, everything specific to it
     index.js                   set definition (the interface the engine uses)
     layout.js                  floor plan: dimensions + furniture footprints
     architecture.js            walls, floor, door, switch, window + blinds, hallway, exterior
@@ -195,7 +214,8 @@ src/
     shots.js                   camera shot presets
     marks.js                   character positions
     sequences.js               storyboards
-  lib/                         procedural textures, geometry helpers, noise, placeholder figure
+  lib/                         procedural textures, geometry helpers, noise, placeholder figure,
+                               corner/floor shading (shading.js), light flicker (flicker.js)
 assets/characters/             placeholder PNGs (replace with your own art)
 tools/make-placeholders.html   regenerates the placeholder PNGs
 ```
@@ -208,7 +228,8 @@ tools/make-placeholders.html   regenerates the placeholder PNGs
   only list what differs from `BASE_PRESET`; fixture levels (`ceiling`, `lamp`, `laptop`, `hall`) are 0–1.
 - **New environment:** copy `src/sets/dorm/` to e.g. `src/sets/motel/`, keep the same exported shape
   (`build()`, `shots`, `marks`, `lightingPresets`, `sequences`, `stateControls`, `defaults`) and import
-  it in `main.js`. The engine, UI, characters, storyboard player and recorder work unchanged.
+  add it to the `SETS` list in `main.js` (it then appears in the drop-down and as `#<set id>`).
+  The engine, UI, characters, storyboard player and recorder work unchanged.
 - **Scripting from the console:**
 
   ```js

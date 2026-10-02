@@ -33,11 +33,30 @@ Three.js r186 is loaded from a CDN via an import map. See `README.md` for usage.
 - **Output:** fixed 16:9 viewport, Auto / 720p / 1080p render size, hide UI, fullscreen, framing
   guides, MediaRecorder capture with explicitly pushed frames.
 
+## Reference-look set (src/sets/dormRef)
+
+A second room rebuilt from a user-supplied reference image (night, ceiling dome light on, seen from
+just inside the door). The back wall, window, wall unit, beds, desks and wardrobe were measured in
+the image (vanishing point, back-wall scale, object heights) to get the room size
+(3.68 × 6.07 × 2.44 m), furniture footprints and the camera (1.35 m high, 20 mm, lens shift);
+shot R reproduces that framing. Grimy plaster, patterned carpet, raised beds with quilts, a
+free-standing wardrobe, an entry closet with the switch and a dark steel frame, mortise lock trim
+on the door, raised mini-blind, a through-wall heating unit, and a night exterior (sky, three
+layers of procedural pines, a low building with lit windows). Lighting: dome spot light + bounce,
+hallway spill through the open door, moonlight and window light. Shared helpers moved to
+`src/lib/shading.js` (corner/floor darkening) and `src/lib/flicker.js`. Sets are chosen from a
+header drop-down / URL hash; the default is the reference-look set.
+
 ## Current change
 
-Initial MVP of the story set (all of the above). Verified in headless Chromium: every shot preset
-under every lighting preset, the full demo storyboard at a fixed timestep, UI clicks / keyboard
-shortcuts / PNG upload, and a recorded WebM download.
+Reference-look set added and made the default; set selector; camera lens shift (`shift` /
+`endShift` on shots); saturation control in the finish pass; recording switch for hosted builds.
+Verified in headless Chromium against the reference image (edge overlay and region brightness)
+and every shot of the new set.
+
+Earlier: initial MVP of the story set (all of the above). Verified in headless Chromium: every shot
+preset under every lighting preset, the full demo storyboard at a fixed timestep, UI clicks /
+keyboard shortcuts / PNG upload, and a recorded WebM download.
 
 Possible next steps: back-view images for cutouts, frame-exact offline export (stage.update/render
 are already separate), more sets reusing the engine.

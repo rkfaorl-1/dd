@@ -21,6 +21,7 @@ const FinishShader = {
     uGrain: { value: 0.05 },
     uVignette: { value: 0.3 },
     uLift: { value: 0 },
+    uSaturation: { value: 1 },
     uFade: { value: 0 },
     uResolution: { value: new THREE.Vector2(1920, 1080) },
   },
@@ -36,6 +37,7 @@ const FinishShader = {
     uniform float uGrain;
     uniform float uVignette;
     uniform float uLift;
+    uniform float uSaturation;
     uniform float uFade;
     uniform vec2 uResolution;
     varying vec2 vUv;
@@ -51,6 +53,7 @@ const FinishShader = {
 
       // Lift the blacks a touch so night scenes read as "filmed", not crushed digital black.
       color = color * (1.0 - uLift) + uLift;
+      color = mix(vec3(dot(color, vec3(0.2126, 0.7152, 0.0722))), color, uSaturation);
 
       // Vignette.
       vec2 d = vUv - 0.5;
@@ -95,14 +98,15 @@ export class PostFX {
     this.finish.uniforms.uResolution.value.set(width, height);
   }
 
-  /** Look parameters from the current lighting preset ({ bloom, grain, vignette, lift }). */
-  setLook({ bloom, grain, vignette, lift }) {
+  /** Look parameters from the current lighting preset ({ bloom, grain, vignette, lift, saturation }). */
+  setLook({ bloom, grain, vignette, lift, saturation = 1 }) {
     this.bloom.strength = bloom;
     this.bloom.enabled = bloom > 0.001;
     const u = this.finish.uniforms;
     u.uGrain.value = grain;
     u.uVignette.value = vignette;
     u.uLift.value = lift;
+    u.uSaturation.value = saturation;
   }
 
   /** Fade to black (1) or up from black (0) over `seconds`. */

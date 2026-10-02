@@ -624,3 +624,296 @@ export function treeTexture() {
     return canvasTexture(canvas, { color: false, repeat: false });
   });
 }
+
+// ---------------------------------------------------------------------------
+// "Reference look" textures (grungier, darker dorm)
+// ---------------------------------------------------------------------------
+
+/**
+ * Old, grimy painted plaster: mottling, darker blotches and faint water streaks.
+ * Near-white, tinted by material colour. One tile = PLASTER_TILE meters.
+ */
+export const PLASTER_TILE = 2.6;
+export function grungyPlasterTextures() {
+  return cached('grungyPlaster', () => {
+    const S = 1024;
+    const rand = mulberry32(2718);
+    const big = tileableNoise(rand, 3);
+    const mid = tileableNoise(rand, 10);
+    const small = tileableNoise(rand, 36);
+    const fine = tileableNoise(rand, 140);
+    const blotch = tileableNoise(rand, 6);
+    // Faint vertical water streaks: [u position, width, strength, start v, length] (canvas v grows downward = world down).
+    const streaks = Array.from({ length: 22 }, () => [rand(), 0.002 + rand() * 0.007, 0.03 + rand() * 0.08, rand(), 0.15 + rand() * 0.45]);
+    const map = paintPixels(makeCanvas(S, S), (x, y) => {
+      const u = x / S, v = y / S;
+      let k =
+        0.84 +
+        (big(u * 3, v * 3) - 0.5) * 0.16 +
+        (mid(u * 10, v * 10) - 0.5) * 0.1 +
+        (small(u * 36, v * 36) - 0.5) * 0.06 +
+        (fine(u * 140, v * 140) - 0.5) * 0.05 +
+        (rand() - 0.5) * 0.025;
+      const b = blotch(u * 6, v * 6);
+      if (b > 0.62) k -= (b - 0.62) * 0.5;
+      for (const [su, w, a, sv, len] of streaks) {
+        let dx = Math.abs(u - su);
+        dx = Math.min(dx, 1 - dx);
+        if (dx > w * 3) continue;
+        let dv = v - sv;
+        if (dv < 0) dv += 1;
+        if (dv < len) k -= a * Math.exp(-(dx * dx) / (w * w)) * (1 - dv / len);
+      }
+      return [255 * k, 250 * k, 241 * k];
+    });
+    const half = S / 2;
+    const bump = paintPixels(makeCanvas(half, half), (x, y) => {
+      const u = x / half, v = y / half;
+      let b = 128 + (small(u * 36, v * 36) - 0.5) * 70 + (fine(u * 140, v * 140) - 0.5) * 90 + (rand() - 0.5) * 26;
+      if (rand() < 0.0015) b -= 70; // pits
+      return [b, b, b];
+    });
+    return { map: canvasTexture(map), bumpMap: canvasTexture(bump, { color: false }) };
+  });
+}
+
+/**
+ * Dark commercial loop carpet with a subtle diagonal lattice, like the reference photo.
+ * Full colour. One tile = PATTERN_CARPET_TILE meters.
+ */
+export const PATTERN_CARPET_TILE = 0.6;
+export function patternedCarpetTextures() {
+  return cached('patternCarpet', () => {
+    const S = 1024;
+    const cell = 8;
+    const n = S / cell;
+    const rand = mulberry32(77);
+    const mottle = tileableNoise(rand, 5);
+    const palette = [
+      [56, 60, 70],
+      [38, 40, 47],
+      [86, 91, 102],
+      [66, 62, 58],
+    ];
+    const tone = new Uint8Array(n * n);
+    const jx = new Float32Array(n * n);
+    const jy = new Float32Array(n * n);
+    for (let cy = 0; cy < n; cy++) {
+      for (let cx = 0; cx < n; cx++) {
+        const i = cy * n + cx;
+        const r = rand();
+        tone[i] = r < 0.56 ? 0 : r < 0.82 ? 1 : r < 0.96 ? 2 : 3;
+        // Diagonal lattice of lighter loops (the carpet's pattern).
+        if ((cx + cy) % 12 === 0 || (((cx - cy) % 12) + 12) % 12 === 0) tone[i] = rand() < 0.75 ? 2 : 0;
+        jx[i] = (rand() - 0.5) * 2;
+        jy[i] = (rand() - 0.5) * 2;
+      }
+    }
+    const loop = (x, y) => {
+      const cx = Math.floor(x / cell), cy = Math.floor(y / cell);
+      const i = (cy % n) * n + (cx % n);
+      const dx = (x % cell) - cell / 2 - jx[i];
+      const dy = (y % cell) - cell / 2 - jy[i];
+      return { i, d: Math.sqrt(dx * dx + dy * dy) / (cell * 0.62) };
+    };
+    const map = paintPixels(makeCanvas(S, S), (x, y) => {
+      const { i, d } = loop(x, y);
+      const c = palette[tone[i]];
+      const m = mottle((x / S) * 5, (y / S) * 5);
+      const k = (1.05 - Math.min(1, d) * 0.45) * (0.9 + (m - 0.5) * 0.25) * (0.94 + rand() * 0.12);
+      return [c[0] * k, c[1] * k, c[2] * k];
+    });
+    const half = S / 2;
+    const bump = paintPixels(makeCanvas(half, half), (x, y) => {
+      const { d } = loop(x * 2, y * 2);
+      const b = 200 - Math.min(1, d) * 150 + (rand() - 0.5) * 30;
+      return [b, b, b];
+    });
+    return { map: canvasTexture(map), bumpMap: canvasTexture(bump, { color: false }) };
+  });
+}
+
+/** Quilted comforter: woven fabric with stitched squares. Near-white, tinted. One tile = 0.6 m. */
+export function quiltTextures() {
+  return cached('quilt', () => {
+    const S = 512;
+    const rand = mulberry32(19);
+    const n = tileableNoise(rand, 12);
+    const square = S / 2; // 0.3 m squares
+    const stitch = (x, y) => {
+      const dx = Math.min(x % square, square - (x % square));
+      const dy = Math.min(y % square, square - (y % square));
+      return Math.min(dx, dy);
+    };
+    const map = paintPixels(makeCanvas(S, S), (x, y) => {
+      const weave = ((x >> 1) + (y >> 1)) % 2 === 0 ? 1 : 0.95;
+      const s = stitch(x, y);
+      let k = weave * (0.88 + (n((x / S) * 12, (y / S) * 12) - 0.5) * 0.12 + (rand() - 0.5) * 0.05);
+      if (s < 3) k *= 0.8;
+      return [255 * k, 255 * k, 255 * k];
+    });
+    const bump = paintPixels(makeCanvas(S, S), (x, y) => {
+      const s = stitch(x, y);
+      // Puffy squares: high in the middle, pinched at the stitches.
+      const puff = Math.min(1, s / (square * 0.35));
+      const b = 60 + puff * 150 + (((x >> 1) + (y >> 1)) % 2) * 12;
+      return [b, b, b];
+    });
+    return { map: canvasTexture(map), bumpMap: canvasTexture(bump, { color: false }) };
+  });
+}
+
+/**
+ * Pine tree silhouettes as an alpha mask (white trees on black).
+ * `trees` optionally fixes the composition: [[x 0..1, height 0..1], ...].
+ */
+export function pinesTexture(seed = 5, trees = null) {
+  return cached(`pines:${seed}:${JSON.stringify(trees)}`, () => {
+    const W = 1024, H = 512;
+    const rand = mulberry32(seed);
+    const canvas = makeCanvas(W, H);
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#fff';
+    ctx.strokeStyle = '#fff';
+    ctx.lineCap = 'round';
+    const pine = (x, base, height, width) => {
+      ctx.fillRect(x - width * 0.02, base - height * 0.15, width * 0.04, height * 0.15);
+      ctx.lineWidth = Math.max(1, width * 0.022);
+      ctx.beginPath();
+      ctx.moveTo(x, base - height * 0.1);
+      ctx.lineTo(x, base - height);
+      ctx.stroke();
+      // Drooping branches, each covered in needle clumps; a few gaps let the sky through.
+      const branches = Math.round(24 + height / 10);
+      for (let i = 0; i < branches; i++) {
+        const t = 0.1 + (0.88 * i) / branches + (rand() - 0.5) * 0.03; // 0 = bottom, 1 = top
+        const y = base - height * t;
+        const reach = (width / 2) * Math.pow(1 - t, 0.85) * (0.7 + rand() * 0.45);
+        for (const dir of [-1, 1]) {
+          if (rand() < 0.12) continue;
+          const L = reach * (0.75 + rand() * 0.35);
+          const droop = height * (0.012 + rand() * 0.028);
+          ctx.lineWidth = Math.max(1, width * 0.012);
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.quadraticCurveTo(x + dir * L * 0.5, y - droop * 0.3, x + dir * L, y + droop);
+          ctx.stroke();
+          const clumps = Math.max(3, Math.round(L / (width * 0.035)));
+          for (let k = 0; k < clumps; k++) {
+            const s = (k + rand() * 0.8) / clumps;
+            const r = width * (0.02 + rand() * 0.024) * (1.25 - s * 0.5);
+            ctx.beginPath();
+            ctx.ellipse(x + dir * L * s, y + droop * s * s + r * 0.3, r * 1.3, r * 0.75, dir * 0.3, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+    };
+    const list = trees || Array.from({ length: 9 }, () => [rand(), 0.55 + rand() * 0.45]);
+    for (const [x, hFrac] of list) {
+      const h = H * hFrac;
+      pine(x * W, H, h, h * (0.42 + rand() * 0.18));
+    }
+    return canvasTexture(canvas, { color: false, repeat: false });
+  });
+}
+
+/** Dark mountain print (the kind of poster in the reference). */
+export function darkPosterTexture(seed = 1) {
+  return cached(`darkPoster:${seed}`, () => {
+    const W = 300, H = 420;
+    const rand = mulberry32(seed * 31 + 7);
+    const canvas = makeCanvas(W, H);
+    const ctx = canvas.getContext('2d');
+    const sky = ctx.createLinearGradient(0, 0, 0, H);
+    sky.addColorStop(0, '#2c333c');
+    sky.addColorStop(0.6, '#3c434b');
+    sky.addColorStop(1, '#14171b');
+    ctx.fillStyle = sky;
+    ctx.fillRect(0, 0, W, H);
+    const peakX = W * (0.4 + rand() * 0.2);
+    const peakY = H * (0.25 + rand() * 0.1);
+    ctx.fillStyle = '#5f666e';
+    ctx.beginPath();
+    ctx.moveTo(0, H * 0.75);
+    ctx.lineTo(peakX - W * 0.18, peakY + H * 0.2);
+    ctx.lineTo(peakX, peakY);
+    ctx.lineTo(peakX + W * 0.22, peakY + H * 0.25);
+    ctx.lineTo(W, H * 0.7);
+    ctx.lineTo(W, H);
+    ctx.lineTo(0, H);
+    ctx.fill();
+    // Snow highlights on the lit flank.
+    ctx.fillStyle = 'rgba(205, 210, 214, 0.75)';
+    ctx.beginPath();
+    ctx.moveTo(peakX, peakY);
+    ctx.lineTo(peakX - W * 0.07, peakY + H * 0.1);
+    ctx.lineTo(peakX - W * 0.02, peakY + H * 0.08);
+    ctx.lineTo(peakX + W * 0.03, peakY + H * 0.12);
+    ctx.lineTo(peakX + W * 0.06, peakY + H * 0.07);
+    ctx.fill();
+    ctx.fillStyle = '#0e1013';
+    ctx.beginPath();
+    ctx.moveTo(0, H * 0.82);
+    for (let x = 0; x <= W; x += 12) ctx.lineTo(x, H * (0.8 + rand() * 0.04));
+    ctx.lineTo(W, H);
+    ctx.lineTo(0, H);
+    ctx.fill();
+    ctx.strokeStyle = '#111';
+    ctx.lineWidth = 10;
+    ctx.strokeRect(5, 5, W - 10, H - 10);
+    return canvasTexture(canvas, { repeat: false });
+  });
+}
+
+/** Tall cork board with a pinned mountain photo and two notes. */
+export function photoCorkboardTexture() {
+  return cached('photoCork', () => {
+    const W = 300, H = 460;
+    const rand = mulberry32(41);
+    const canvas = paintPixels(makeCanvas(W, H), () => {
+      const k = 0.78 + rand() * 0.28;
+      return [150 * k, 112 * k, 78 * k];
+    });
+    const ctx = canvas.getContext('2d');
+    const card = (x, y, w, h, angle, fill, draw) => {
+      ctx.save();
+      ctx.translate(x + w / 2, y + h / 2);
+      ctx.rotate(angle);
+      ctx.fillStyle = 'rgba(0,0,0,0.3)';
+      ctx.fillRect(-w / 2 + 3, -h / 2 + 4, w, h);
+      ctx.fillStyle = fill;
+      ctx.fillRect(-w / 2, -h / 2, w, h);
+      draw?.(w, h);
+      ctx.fillStyle = '#3a3a3a';
+      ctx.beginPath();
+      ctx.arc(0, -h / 2 + 7, 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    };
+    card(95, 48, 110, 140, 0.02, '#e8e6e1', (w, h) => {
+      ctx.fillStyle = '#2b2f33';
+      ctx.fillRect(-w / 2 + 8, -h / 2 + 8, w - 16, h - 30);
+      ctx.fillStyle = '#8b9096';
+      ctx.beginPath();
+      ctx.moveTo(-w / 2 + 8, h / 2 - 30);
+      ctx.lineTo(-6, -h / 2 + 30);
+      ctx.lineTo(w / 2 - 8, h / 2 - 40);
+      ctx.lineTo(w / 2 - 8, h / 2 - 22);
+      ctx.lineTo(-w / 2 + 8, h / 2 - 22);
+      ctx.fill();
+    });
+    const lines = (w, h) => {
+      ctx.fillStyle = 'rgba(70,70,70,0.6)';
+      for (let i = 0; i < 6; i++) ctx.fillRect(-w / 2 + 8, -h / 2 + 18 + i * 12, w - 16 - rand() * 18, 3);
+    };
+    card(28, 230, 96, 110, -0.05, '#dcd9d0', lines);
+    card(150, 290, 100, 120, 0.04, '#e3e0d6', lines);
+    ctx.strokeStyle = '#4a3423';
+    ctx.lineWidth = 16;
+    ctx.strokeRect(8, 8, W - 16, H - 16);
+    return canvasTexture(canvas, { repeat: false });
+  });
+}
