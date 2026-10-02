@@ -45,6 +45,8 @@ export const CHARACTER_SLOTS = [
 export const APP_CONFIG = {
   // 'auto' renders at screen resolution; '720p' / '1080p' render at a fixed size (best for recording).
   renderSize: 'auto',
+  // Set to false where the page cannot save files (e.g. a sandboxed hosted preview).
+  recording: true,
   recordFps: 30,
   recordBitrate: 14_000_000,
   // Override the set's defaults if you like (shot id / lighting preset id).

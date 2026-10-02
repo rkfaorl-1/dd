@@ -290,10 +290,13 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
   const guidesBox = h('input', { type: 'checkbox', onchange: (e) => app.classList.toggle('show-guides', e.target.checked) });
   const orbitBox = h('input', { type: 'checkbox', onchange: (e) => stage.setDebugOrbit(e.target.checked) });
   const copyPoseBtn = h('button', { class: 'btn small', type: 'button', title: 'C (in debug mode)', onclick: () => copyPose() }, 'Copy camera pose');
-  if (!Recorder.isSupported()) {
+  const recordingOff = stage.config.recording === false;
+  if (recordingOff || !Recorder.isSupported()) {
     recBtn.disabled = true;
     recSeqBtn.disabled = true;
-    recBtn.title = recSeqBtn.title = 'Recording needs MediaRecorder + canvas.captureStream (Chrome, Edge, Firefox).';
+    recBtn.title = recSeqBtn.title = recordingOff
+      ? 'Recording is turned off in this build. Run the project locally to record video files.'
+      : 'Recording needs MediaRecorder + canvas.captureStream (Chrome, Edge, Firefox).';
   }
   panel.append(
     section(
@@ -308,7 +311,13 @@ export function buildUI(stage, { app, panel, hud, stageArea, showUiButton }) {
       ),
       h('div', { class: 'row-inline' }, h('label', { class: 'check' }, guidesBox, 'Framing guides'), h('label', { class: 'check' }, orbitBox, 'Debug orbit')),
       h('div', { class: 'row-inline' }, copyPoseBtn),
-      h('p', { class: 'hint' }, 'Only the 3D view is recorded — the panel and HUD never appear in the video. Keep this tab visible while recording.'),
+      h(
+        'p',
+        { class: 'hint' },
+        recordingOff
+          ? 'Recording is off here because this page cannot save files. Run the project locally to record, or capture this tab with a screen recorder (Hide UI + Fullscreen gives a clean 16:9 frame).'
+          : 'Only the 3D view is recorded — the panel and HUD never appear in the video. Keep this tab visible while recording.',
+      ),
     ),
   );
 

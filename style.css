@@ -35,8 +35,7 @@ body {
 #app {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--panel-width);
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
 }
 
 #app.ui-hidden {
@@ -286,7 +285,7 @@ body {
   overflow-y: auto;
   background: var(--panel);
   border-left: 1px solid var(--line);
-  padding: 0 14px 24px;
+  padding: 0 16px 24px;
   scrollbar-width: thin;
   scrollbar-color: #3a3a40 transparent;
 }
@@ -698,17 +697,17 @@ input[type='range']:disabled {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     height: auto;
-    min-height: 100dvh;
+    min-height: 100%;
   }
 
   #app.ui-hidden {
     grid-template-columns: 1fr;
-    height: 100dvh;
+    height: 100%;
   }
 
   #stage-area {
     container-type: inline-size;
-    padding: 8px;
+    padding: 16px;
   }
 
   #app.ui-hidden #stage-area {

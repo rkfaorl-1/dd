@@ -253,6 +253,10 @@ export class StoryStage extends EventTarget {
   }
 
   startRecording() {
+    if (this.config.recording === false) {
+      this._emit('message', { text: 'Recording is turned off in this build.', level: 'error' });
+      return;
+    }
     try {
       this.recorder.start({ fps: this.config.recordFps || 30, bitrate: this.config.recordBitrate || 14_000_000 });
       this._emit('recording', { recording: true });
