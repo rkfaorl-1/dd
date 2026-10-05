@@ -1,0 +1,24 @@
+{
+  "name": "cigarette-chart-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Remotion replica of a Korean infographic chart animation (cigarette price vs. inflation)",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render CigaretteChart out/video.mp4",
+    "still": "remotion still CigaretteChart",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.533",
+    "@remotion/fonts": "4.0.533",
+    "@remotion/motion-blur": "4.0.533",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.533"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}
