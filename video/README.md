@@ -47,6 +47,14 @@ npm run render    # out/video.mp4 로 렌더링
 
   투명 배경 그림이면 크림색 스티커 테두리는 스크립트가 자동으로 붙입니다.
 
+## 두 번째 영상: 옥수수 기원 (CornOrigins)
+
+`npm run render:corn` → `out/corn.mp4` (1920×960, 18초)
+
+- 장면: 지구본(멕시코에서 초록 지역과 옥수수가 퍼짐) → 평면 세계지도(작물 그림 + 말풍선) → 곡물 5종
+- 코드: `src/corn/CornOrigins.tsx` (위치·타이밍·문구가 모두 이 파일 위쪽에 있음), 지도 데이터 `src/corn/geo.ts`
+- 그림: `assets-src/`의 corn-sticker / crops-cluster / grains-sepia → `python scripts/prepare_corn_assets.py`로 `public/corn/` 생성
+
 ## 참고
 
 - 위치·크기·색·움직임은 원본 영상을 프레임 단위로 측정해서 맞췄습니다. 최저임금 선은 최저임금위원회 공식 시급과 같습니다.

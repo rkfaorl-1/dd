@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "lib": ["DOM", "ES2022"],
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true
   },

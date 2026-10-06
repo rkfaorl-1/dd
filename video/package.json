@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render CigaretteChart out/video.mp4",
+    "render:corn": "remotion render CornOrigins out/corn.mp4",
     "still": "remotion still CigaretteChart",
     "typecheck": "tsc --noEmit"
   },
@@ -13,12 +14,17 @@
     "@remotion/cli": "4.0.533",
     "@remotion/fonts": "4.0.533",
     "@remotion/motion-blur": "4.0.533",
+    "d3-geo": "^3.1.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "remotion": "4.0.533"
+    "remotion": "4.0.533",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
     "@types/react": "19.2.2",
+    "@types/topojson-client": "^3.1.5",
     "typescript": "5.9.3"
   }
 }
