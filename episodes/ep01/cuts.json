@@ -1,460 +1,1768 @@
 {
-  "episode": "EP01 불을 켜지 않은 밤",
-  "video_suffix": "Realistic natural motion. No new people appear. Nothing else in the frame moves.",
-  "parts": {
-    "0": "콜드오픈",
-    "1": "1부 · 평소",
-    "2": "2부 · 그날 밤",
-    "3": "3부 · 다음 날",
-    "4": "4부 · 조사",
-    "5": "5부 · 재구성 (경찰 추정)",
-    "6": "6부 · 만약 불을 켰다면"
-  },
-  "cuts": [
-    {"id":"C001","part":"0","kind":"V","dur":"10s","ref":"R7","narr":"(나레이션 없음 · 룸톤만)",
-     "tech":["CAM-006","ACT-012","LGT-001","SND-012"],
-     "shot":"어둠 속 스위치 극근경. 손이 들어와 1cm 앞에서 멈춘다. 끝에 손글씨 자막 '불을 켜지 않아서 다행이지?'를 편집으로 1.5초 띄운다.",
-     "img":"Use R7 as is.",
-     "vid":"0-4s: a young person's hand in a navy hoodie sleeve slowly enters from the right edge, fingers reaching toward the switch. 4-7s: it stops about one centimeter before touching and trembles very slightly. 7-10s: it holds perfectly still. The camera is completely locked off and does not move or zoom. [Static shot]",
-     "snd":"룸톤 → 손이 멈추는 순간 완전 무음"},
-    {"id":"C002","part":"0","kind":"T","dur":"4s","ref":"-","narr":"(없음)",
-     "tech":["EDT-022"],
-     "shot":"검은 화면에 제목 「불을 켜지 않은 밤」과 작은 자막 '제보자 A씨 · 대학 기숙사'.",
-     "img":"-","vid":"-","snd":"저음 패드 시작"},
-
-    {"id":"C003","part":"1","kind":"V","dur":"10s","ref":"R6","narr":"이건 내가 대학 기숙사에서 룸메이트와 같이 살 때 있었던 일이야.",
-     "tech":["LGT-014","CAM-003"],
-     "shot":"익명 인터뷰 실루엣. 다큐 톤 선언.",
-     "img":"Use R6.",
-     "vid":"The silhouetted person sits almost still; shoulders rise and fall with slow breathing; at 6s the interlocked fingers slowly tighten once. Very slow push in toward the silhouette. [Push in]",
-     "snd":"인터뷰 룸 룸톤"},
-    {"id":"C004","part":"1","kind":"V","dur":"6s","ref":"R5","narr":"(이어서)",
-     "tech":["CAM-005"],
-     "shot":"기숙사 외관 해질녘 설정샷. 창문 불이 하나둘 켜진다.",
-     "img":"Use R5 but at dusk under an overcast sky, about half the windows lit, a few students walking on the footpath.",
-     "vid":"Window lights turn on one by one across the facade; two students walk slowly along the path. The camera is completely locked off.",
-     "snd":"저녁 외부 환경음"},
-    {"id":"C005","part":"1","kind":"I","dur":"7s","ref":"R1","narr":"우리는 침대와 책상이 두 개씩 놓인 평범한 2인실을 쓰고 있었어.",
-     "tech":["CMP-002","CMP-016"],
-     "shot":"R1 방 전경(대칭). 시청자에게 방 지도를 심는 컷. 편집에서 아주 느린 확대.",
-     "img":"Use R1.","vid":"(편집: 3% 확대)","snd":"낮 룸톤, 먼 복도 웃음소리"},
-    {"id":"C006","part":"1","kind":"V","dur":"6s","ref":"R1","narr":"서로 생활 패턴도 어느 정도 알고 있어서 한 명이 늦게 들어오는 날에는 굳이 기다리지 않고 먼저 자는 경우도 많았지.",
-     "tech":["ACT-018","CAM-002"],
-     "shot":"룸메이트 뒷모습 — 왼쪽 책상, 스탠드, 헤드폰. 얼굴은 끝까지 보이지 않는다.",
-     "img":"Same room as the reference, evening, ceiling light off and only the warm desk lamp on at the left desk. Medium shot from behind: the roommate, a young man with short black hair in a light gray sweatshirt wearing headphones, sits at the left desk typing on a laptop, face not visible. His bed with the gray navy-striped blanket is in the background.",
-     "vid":"He types slowly, reaches for a mug, takes a sip and puts it back. His face stays turned away from the camera the whole time. The camera is completely locked off.",
-     "snd":"타자 소리, 헤드폰 새는 음악 아주 작게"},
-    {"id":"C007","part":"1","kind":"V","dur":"6s","ref":"R1","narr":"그날 저녁에는 내가 친구들을 만나러 나갔고, 룸메이트는 기숙사에 남아 있었어.",
-     "tech":["CAM-001","CMP-009"],
-     "shot":"1인칭 — 문간에서 흰 운동화 끈을 묶는 손. 뒤쪽 흐릿하게 책상 앞 룸메이트.",
-     "img":"First-person view looking down at the narrator's own hands tying white sneakers near the room door, navy hoodie sleeves visible, a black backpack on the floor. In the soft-focus background the roommate sits at the left desk in warm lamp light with his back turned.",
-     "vid":"0-4s: the hands finish tying the laces. 4-6s: the view rises as the person stands up, slight natural handheld motion. The roommate in the background stays still at the desk.",
-     "snd":"끈 묶는 소리"},
-    {"id":"C008","part":"1","kind":"V","dur":"6s","ref":"R4","narr":"나가기 전에 특별한 얘기를 나눈 것도 없었고, 정말 평소와 다를 게 없는 날이었어.",
-     "tech":["CMP-007","EDT-008","HOR-022"],
-     "shot":"복도에서 본 닫히는 문. 문틈 속 스탠드 불빛과 룸메이트 뒷모습 — 살아 있는 그의 마지막 모습. C043과 같은 구도로 짝을 맞춘다.",
-     "img":"Shot from the dormitory corridor toward a beige metal door that is half open. Through the gap, inside the room, the roommate in a light gray sweatshirt sits at the desk in warm lamp light with his back to camera. The corridor is lit by cool fluorescent light.",
-     "vid":"The door slowly swings closed from the inside; the vertical gap of warm light narrows steadily until the door shuts completely at 5s. The camera is completely locked off. [Static shot]",
-     "snd":"문 닫힘 '딸깍' → 복도 형광등 험"},
-    {"id":"C009","part":"1","kind":"V","dur":"6s","ref":"-","narr":"친구들과 시간을 보내다 보니 어느새 밤이 꽤 늦었어.",
-     "tech":["CAM-020","LGT-015"],
-     "shot":"포장마차 테이블, 친구들은 아웃포커스. 따뜻한 보케. 1부 마지막 '따뜻한 색'.",
-     "img":"Shallow depth of field shot of a Korean street pub table at night: green soju bottles, glasses and side dishes sharp in the foreground, three friends laughing out of focus behind, warm string-light bokeh.",
-     "vid":"The out-of-focus friends laugh and gesture; a hand sets down a glass in the foreground; the bokeh lights shimmer. Gentle handheld drift.",
-     "snd":"웅성임, 잔 부딪힘"},
-    {"id":"C010","part":"1","kind":"V","dur":"6s","ref":"-","narr":"그러다 기숙사 방에 두고 온 물건이 하나 필요하다는 걸 깨달았지.",
-     "tech":["ACT-008","CAM-006"],
-     "shot":"백팩 안을 뒤지던 손이 멈춘다. 물건은 끝까지 특정하지 않는다.",
-     "img":"Close-up of hands in navy hoodie sleeves rummaging inside an open black backpack on a pub bench, warm light.",
-     "vid":"0-4s: the hands search through the bag. 4-6s: they stop, and the fingers rest still on the edge of the bag. Camera static.",
-     "snd":"가방 뒤지는 소리, 배경 웅성임 작아짐"},
-    {"id":"C011","part":"1","kind":"I","dur":"8s","ref":"-","narr":"다음 날 아침에 가져와도 되는 물건이었는데, 그때는 별생각이 없었어. 기숙사가 멀리 있는 것도 아니었고, 잠깐 들어가서 물건만 챙겨 나오면 되는 일이었으니까.",
-     "tech":["CAM-005"],
-     "shot":"늦은 밤 캠퍼스 길. 가로등, 멀리 기숙사.",
-     "img":"Empty university campus footpath late at night, a row of street lamps leading toward a distant six-story dormitory building with only a few lit windows, cold air, no people.",
-     "vid":"(편집: 길 방향으로 느린 확대)","snd":"밤 바람, 먼 차 소리"},
-    {"id":"C012","part":"1","kind":"V","dur":"6s","ref":"R5","narr":"그래서 혼자 기숙사로 돌아갔어.",
-     "tech":["CMP-011","CAM-005"],
-     "shot":"기숙사 유리 입구로 걸어가는 작은 뒷모습.",
-     "img":"Use R5 at night. Add a small figure in a navy hoodie with a black backpack on the footpath, seen from behind, walking toward the lit glass entrance.",
-     "vid":"The small figure walks slowly away from the camera toward the glass entrance and goes inside at 5s. A moth circles the entrance lamp. The camera is completely locked off.",
-     "snd":"발소리, 자동문"},
-
-    {"id":"C013","part":"2","kind":"V","dur":"10s","ref":"R4","narr":"시간이 늦어서 건물 안은 조용했어.",
-     "tech":["CMP-002","CMP-004","CAM-023","SND-004"],
-     "shot":"텅 빈 복도 1점 투시 롱홀드. 아무것도 일어나지 않는다.",
-     "img":"Use R4.",
-     "vid":"Nothing happens. Only one distant ceiling light flickers very slightly once at 6s. The camera is completely locked off and does not move or zoom. [Static shot]",
-     "snd":"형광등 험만"},
-    {"id":"C014","part":"2","kind":"I","dur":"5s","ref":"R4","narr":"낮에는 복도에서 사람들 목소리도 들리고 문 여닫는 소리도 계속 나는데,",
-     "tech":["HOR-014","EDT-016"],
-     "shot":"같은 복도의 낮 — 학생들이 오가는 모습. 순간 회상처럼 디졸브.",
-     "img":"Same corridor as R4, same camera position, but in the daytime: several students walking, chatting, a door half open, bright and lively. Faces small and natural.",
-     "vid":"(편집: 디졸브 인/아웃)","snd":"낮 웅성임 (L컷으로 다음 컷까지 끌다 끊음)"},
-    {"id":"C015","part":"2","kind":"V","dur":"6s","ref":"R4","narr":"그때는 대부분 자기 방에 들어간 뒤라 인기척이 거의 없더라고.",
-     "tech":["CAM-018","CAM-010"],
-     "shot":"남색 후드 뒷모습을 일정 거리로 따라가는 매끄러운 추적.",
-     "img":"Use R4 with the narrator in a navy hoodie and black backpack seen from behind in the middle of the corridor, a few meters ahead of the camera.",
-     "vid":"The person walks steadily down the corridor away from the camera; the camera follows behind at a constant distance with a perfectly smooth glide; closed doors pass on both sides. [Tracking shot]",
-     "snd":"발소리만 울림"},
-    {"id":"C016","part":"2","kind":"V","dur":"6s","ref":"R4","narr":"우리 방 앞에 도착해서",
-     "tech":["ACT-009","CAM-006"],
-     "shot":"문손잡이·열쇠 근접. 방 번호는 편집에서 합성.",
-     "img":"Close-up of a beige metal dormitory door handle with a key inserted in the lock, a hand in a navy hoodie sleeve holding the key, cool fluorescent light.",
-     "vid":"The hand turns the key slowly, presses the handle down, and the door starts to open inward. Camera static.",
-     "snd":"열쇠, 손잡이 '철컥'"},
-    {"id":"C017","part":"2","kind":"V","dur":"10s","ref":"R2","narr":"문을 열었는데, 안은 완전히 어두웠어.",
-     "tech":["CMP-013","LGT-009","CAM-002"],
-     "shot":"어깨너머 — 안쪽·왼쪽으로 열리는 문, 바닥에 쐐기 모양 복도 빛. 문짝이 왼쪽 틈을 가린다.",
-     "img":"Over-the-shoulder shot from the corridor past a person in a navy hoodie: a door swung open inward and to the left into a completely dark dorm room. A wedge of cool corridor light falls across the gray floor, reaching the legs of the two desks; beyond it near-total darkness. The open door panel hides the area to the left of the doorway.",
-     "vid":"0-3s: the door finishes swinging open and gently stops. 3-10s: hold. The person's shoulder stays still. The darkness inside does not change at all. The camera is completely locked off.",
-     "snd":"문 끼익(작게) → 복도 험이 방 안 룸톤에 먹힘"},
-    {"id":"C018","part":"2","kind":"I","dur":"5s","ref":"R2","narr":"나는 룸메이트가 이미 자고 있다고 생각했지.",
-     "tech":["CAM-001","CMP-018"],
-     "shot":"문간 1인칭 — 빛 쐐기 끝에 희미한 왼쪽 침대 윤곽과 이불 덩어리.",
-     "img":"Use R2 from the doorway at eye level, with the wedge of corridor light on the floor; only the faint outline of the left bed and the blanket lump are readable.",
-     "vid":"(편집: 아주 느린 확대)","snd":"무음에 가까운 룸톤"},
-    {"id":"C019","part":"2","kind":"R","dur":"4s","ref":"R7","narr":"문 바로 옆에 전등 스위치가 있었기 때문에 처음에는 당연히 불을 켜려고 했어.",
-     "tech":["EDT-017"],
-     "shot":"C001 이미지 정지 화면 (손 없음).","img":"= C001 첫 프레임","vid":"-","snd":"-"},
-    {"id":"C020","part":"2","kind":"R","dur":"7s","ref":"R7","narr":"실제로 손까지 뻗었는데, 스위치를 누르기 직전에 멈췄어.",
-     "tech":["EDT-017","HOR-014","ACT-012"],
-     "shot":"C001 영상 재사용 — 콜드오픈의 의미가 여기서 연결된다.","img":"-","vid":"= C001","snd":"멈추는 순간 무음"},
-    {"id":"C021","part":"2","kind":"V","dur":"6s","ref":"R7","narr":"룸메이트가 자고 있을 텐데 굳이 깨울 필요가 있나 싶었던 거야.",
-     "tech":["ACT-008"],
-     "shot":"스위치 앞 손이 천천히 거둬진다.",
-     "img":"= C001 마지막 프레임 (손이 스위치 앞에 떠 있는 상태)",
-     "vid":"The hand hovering near the switch slowly pulls back and drops out of the bottom of the frame by 4s. The switch remains in the strip of light. The camera is completely locked off.",
-     "snd":"옷 스침"},
-    {"id":"C022","part":"2","kind":"I","dur":"6s","ref":"R1","narr":"어차피 필요한 물건이 어디에 있는지도 알고 있었고, 매일 생활하던 방이니까 불을 켜지 않아도 찾을 수 있을 것 같았어.",
-     "tech":["EDT-016","LGT-012"],
-     "shot":"기억 속 밝은 '내 책상'(오른쪽) 1초 플래시 → 같은 구도의 어둠으로 디졸브.",
-     "img":"Same room as R1, daytime, medium shot of the right-side desk with its drawer unit, a few books and a pen holder, bright and ordinary. Then make a second version of exactly the same frame at night in darkness with only faint moonlight.",
-     "vid":"(편집: 밝은 판 → 어두운 판 디졸브)","snd":"-"},
-    {"id":"C023","part":"2","kind":"V","dur":"10s","ref":"R2","narr":"그래서 그냥 어두운 채로 들어갔어.",
-     "tech":["LGT-007","LGT-014","CAM-003","HOR-013"],
-     "shot":"방 안 왼쪽 구석 낮은 위치(=범인 자리)에서 본 문간. 복도빛 역광 실루엣이 들어와 문을 닫는다. 5부에서 이 자리가 누구 시점이었는지 드러난다.",
-     "img":"From inside a dark dorm room, from a low position in the corner just left of the entry door, looking diagonally toward the open doorway: a person stands as a black silhouette in the bright doorway with cool fluorescent corridor light behind them. The room interior is in deep shadow.",
-     "vid":"0-4s: the silhouette steps inside. 4-9s: they slowly close the door behind them; the light shrinks to a thin line and disappears, leaving near-darkness with faint blue moonlight. The camera is completely locked off. [Static shot]",
-     "snd":"문 닫힘(아주 조심스럽게), 복도 험 차단"},
-    {"id":"C024","part":"2","kind":"I","dur":"8s","ref":"R2","narr":"문을 닫고 몇 걸음 들어가니까 처음에는 정말 아무것도 보이지 않았어. 밝은 복도에서 바로 들어와서 눈이 어둠에 익숙하지 않았던 것 같아.",
-     "tech":["LGT-004","CAM-001","HOR-019"],
-     "shot":"거의 검은 화면에서 방 윤곽이 서서히 떠오른다 = 눈이 적응하는 과정. 편집에서 노출 램프.",
-     "img":"Use R2 from the center of the room, eye level, facing the window and the two beds (generate slightly brighter; darken in edit).",
-     "vid":"(편집: 블랙 → 노출 서서히 올림, 8초)","snd":"자기 숨소리(가깝게)"},
-    {"id":"C025","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"나는 손으로 책상 위치를 더듬으면서 내 자리까지 갔어.",
-     "tech":["ACT-008","SND-005","CAM-006"],
-     "shot":"푸른 달빛 속 책상 모서리를 더듬는 손.",
-     "img":"Close-up in near darkness lit only by faint blue moonlight: a hand in a navy hoodie sleeve resting on the edge of a wooden desk, fingertips feeling the surface.",
-     "vid":"The hand slides slowly along the desk edge, fingertips feeling the way, and stops at the back of a chair. The camera tracks slowly alongside the hand.",
-     "snd":"손끝 마찰음"},
-    {"id":"C026","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"혹시라도 룸메이트를 깨울까 봐 의자를 건드리지 않으려고 조심했고,",
-     "tech":["CAM-007","ACT-013"],
-     "shot":"바닥 높이 — 의자 다리 사이로 조심스럽게 디디는 흰 운동화.",
-     "img":"Ground-level shot in a dark dorm room lit by faint moonlight: white sneakers next to the metal legs of a desk chair on gray linoleum.",
-     "vid":"One foot lifts and steps carefully around the chair leg without touching it, then the other follows slowly. The camera is locked at floor level.",
-     "snd":"리놀륨 위 고무창"},
-    {"id":"C027","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"서랍을 열 때도 최대한 소리를 내지 않았지.",
-     "tech":["SND-005","CAM-006"],
-     "shot":"서랍이 1cm씩 열리는 근접.",
-     "img":"Close-up of a desk drawer front with a small metal handle in darkness, fingers on the handle, faint moonlight.",
-     "vid":"The fingers pull the drawer open very slowly, a few centimeters at a time, pausing between pulls. Camera static.",
-     "snd":"서랍 레일 '스르륵'(이 소리가 5부에서 다시 쓰임)"},
-    {"id":"C028","part":"2","kind":"V","dur":"6s","ref":"R6","narr":"지금 생각하면 그게 참 이상해.",
-     "tech":["ACT-011","EDT-010"],
-     "shot":"인터뷰 실루엣 — 고개를 천천히 숙인다.",
-     "img":"= C003 이미지",
-     "vid":"The silhouetted person slowly lowers their head and stays still. Camera static.",
-     "snd":"인터뷰 룸톤"},
-    {"id":"C029","part":"2","kind":"V","dur":"10s","ref":"R3","narr":"그때 나는 방 안에 있는 사람이 룸메이트 한 명뿐이라고 너무 당연하게 생각하고 있었거든.",
-     "tech":["CAM-008","CAM-004","HOR-012","CMP-010"],
-     "shot":"★마스터 구도(밤). 창가 위 구석 부감. 오른쪽 책상의 제보자, 왼쪽 침대 이불, 문 왼쪽 틈엔 '조금 더 짙은 어둠'. 5부 C073의 원판.",
-     "img":"Use R3 at night with the ceiling light off and only faint moonlight. The narrator in a navy hoodie crouches at the right-side desk with their back to the door, searching a drawer. The left bed has a still blanket lump, head covered. In the narrow recess to the left of the closed door the darkness is slightly denser, a barely perceptible tall vertical shape that could be a coat hanging there. Almost invisible.",
-     "vid":"The person at the right desk quietly rummages in the drawer and lifts out a small item. Everything else in the room, including the blanket and the dark recess by the door, remains perfectly still. The camera is completely locked off and does not move or zoom. [Static shot]",
-     "snd":"서랍, 옷 스침. 그 외 무음"},
-    {"id":"C030","part":"2","kind":"I","dur":"8s","ref":"R2","narr":"내가 방 안을 돌아다니는 동안 룸메이트 쪽에서는 아무 소리도 들리지 않았어.",
-     "tech":["CAM-004","EDT-011","SND-012"],
-     "shot":"룸메이트 침대 미디엄. 이불이 머리까지 덮여 있다. 절대 움직이지 않는다 → 영상 대신 이미지.",
-     "img":"Medium shot of the left bed in a dark dorm room lit by faint moonlight through vertical blinds: a gray blanket with thin navy stripes covers a body-shaped lump completely including the head. Stillness. No skin visible.",
-     "vid":"(편집: 확대 없이 8초 고정)","snd":"방 룸톤도 내려서 '죽은 정적'"},
-    {"id":"C031","part":"2","kind":"I","dur":"5s","ref":"R2","narr":"숨소리조차 기억나지 않아.",
-     "tech":["CAM-006","CMP-019"],
-     "shot":"이불 주름·베개 끝 극근경. 줄무늬 위 달빛 띠.",
-     "img":"Extreme close-up of the folds of the gray navy-striped blanket at the edge of a pillow, a thin band of moonlight across it, darkness around.",
-     "vid":"(편집: 고정)","snd":"무음"},
-    {"id":"C032","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"그런데 당시에는 그게 전혀 이상하지 않았어. 자는 사람이 조용한 건 당연하다고 생각했으니까.",
-     "tech":["CAM-002"],
-     "shot":"오른쪽 옷장을 여는 뒷모습.",
-     "img":"From behind, in darkness with faint moonlight: the narrator in a navy hoodie stands in front of the right-side wardrobe near the door, one hand on its door.",
-     "vid":"The person slowly opens the wardrobe door, careful not to let the hinge creak. The camera is locked off.",
-     "snd":"경첩(작게)"},
-    {"id":"C033","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"필요한 물건을 찾은 다음에는 옷도 몇 벌 챙겼어.",
-     "tech":["ACT-008","SND-005"],
-     "shot":"옷걸이에서 후드티를 빼 가방에 넣는 손.",
-     "img":"Close-up in darkness: hands taking folded hoodies from a wardrobe shelf, an open black backpack below.",
-     "vid":"The hands take two folded hoodies and push them into the open backpack. Camera static.",
-     "snd":"천 스침"},
-    {"id":"C034","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"친구 쪽에서 조금 더 있다가 돌아올 생각이었던 것 같아.",
-     "tech":["SND-005","CAM-006"],
-     "shot":"지퍼를 아주 천천히 닫는다.",
-     "img":"Extreme close-up of a backpack zipper half closed in faint moonlight, fingers on the zipper pull.",
-     "vid":"The fingers pull the zipper closed very slowly and evenly from left to right. Camera static.",
-     "snd":"지퍼 — 크게 들림(5부 재사용)"},
-    {"id":"C035","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"그러다가 침대 쪽을 한번 쳐다보기도 했어.",
-     "tech":["CAM-002","ACT-004"],
-     "shot":"어깨너머 — 고개를 왼쪽 침대로 돌린다. 시선은 침대로만, 문 옆 틈은 프레임 왼쪽 가장자리에 걸쳐 있다.",
-     "img":"Over-the-shoulder from behind the narrator standing near the right desk in darkness, looking across the room: the left bed with the blanket lump is faintly visible; the left edge of the frame includes the dark corner beside the door.",
-     "vid":"The person's head turns slowly to the left toward the bed and holds there. The camera is locked off behind their shoulder.",
-     "snd":"-"},
-    {"id":"C036","part":"2","kind":"I","dur":"6s","ref":"R2","narr":"하지만 방 안이 너무 어두워서 침대 윤곽 정도밖에는 보이지 않았어.",
-     "tech":["CAM-001","CMP-006"],
-     "shot":"1인칭 — 침대 윤곽뿐. (5부 C077의 원판)",
-     "img":"First-person view from the right side of a dark dorm room toward the left bed: only the outline of the bed frame and the blanket lump are readable in faint moonlight; the dark recess beside the door at the far left edge of frame.",
-     "vid":"(편집: 고정)","snd":"-"},
-    {"id":"C037","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"룸메이트가 실제로 거기에 누워 있는지 확인할 정도는 아니었지.",
-     "tech":["CAM-019","HOR-023"],
-     "shot":"C036 이미지로 — 초점이 풀렸다 잡혔다 (어둠 속 눈의 피로).",
-     "img":"= C036",
-     "vid":"The image slowly drifts out of focus and back into focus twice, like eyes straining in the dark. Nothing in the room moves. The camera does not move.",
-     "snd":"-"},
-    {"id":"C038","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"그렇다고 가까이 가서 볼 생각도 없었어.",
-     "tech":["ACT-013"],
-     "shot":"바닥 — 운동화가 침대 반대쪽(문 쪽)으로 방향을 바꾼다.",
-     "img":"Ground-level shot in the dark room: white sneakers facing toward the left bed.",
-     "vid":"The feet turn away from the bed and point toward the door, then take one step. The camera is locked at floor level.",
-     "snd":"발소리 1회"},
-    {"id":"C039","part":"2","kind":"R","dur":"5s","ref":"R6","narr":"자는 사람 얼굴까지 확인할 이유가 없잖아.",
-     "tech":["EDT-010"],
-     "shot":"인터뷰 실루엣 정지 (C003).","img":"= C003","vid":"-","snd":"-"},
-    {"id":"C040","part":"2","kind":"V","dur":"6s","ref":"R2","narr":"나는 그냥 룸메이트가 자고 있다고 생각했고, 물건을 다 챙긴 다음 다시 문 쪽으로 갔어.",
-     "tech":["CAM-010","CMP-004"],
-     "shot":"낮은 위치에서 발을 따라 문으로. 문 아래 틈의 복도빛 한 줄이 목표점.",
-     "img":"Low shot from behind white sneakers walking toward a closed door in a dark room; a thin line of corridor light glows under the door.",
-     "vid":"The feet walk slowly toward the door; the camera follows low behind them at a constant distance. [Tracking shot]",
-     "snd":"발소리"},
-    {"id":"C041","part":"2","kind":"V","dur":"6s","ref":"R7","narr":"나갈 때도 불은 켜지 않았어.",
-     "tech":["ACT-009","HOR-014"],
-     "shot":"스위치 바로 옆을 지나가는 손 — 이번엔 멈추지도 않는다.",
-     "img":"= C001 첫 프레임 (스위치, 어둠)",
-     "vid":"A hand passes right in front of the switch without slowing down and reaches past it toward the door handle out of frame. The camera is completely locked off.",
-     "snd":"-"},
-    {"id":"C042","part":"2","kind":"V","dur":"10s","ref":"R4","narr":"문 닫는 소리에 룸메이트가 깰까 봐 손잡이를 잡은 채 천천히 문을 닫았던 건 기억나.",
-     "tech":["EDT-008","CMP-007","ACT-009"],
-     "shot":"C008과 같은 구도. 복도에서 보는 닫히는 문 — 이번엔 문틈 안이 완전한 어둠.",
-     "img":"Same framing as cut C008: from the dormitory corridor toward the same beige door, half open, but now the gap shows only total darkness inside the room. A hand holds the outer handle.",
-     "vid":"0-8s: the door closes extremely slowly while the hand keeps holding the handle; the black gap narrows to nothing. 8-10s: the handle is released gently without a click. The camera is completely locked off. [Static shot]",
-     "snd":"걸쇠를 누른 채 닫는 소리 — 아주 작게"},
-    {"id":"C043","part":"2","kind":"I","dur":"4s","ref":"-","narr":"그리고 다시 친구들이 있는 곳으로 돌아갔어.",
-     "tech":["LGT-015"],
-     "shot":"C009 포장마차 이미지 재사용(따뜻한 색).","img":"= C009 이미지","vid":"(편집: 느린 확대)","snd":"웅성임 페이드 인"},
-    {"id":"C044","part":"2","kind":"V","dur":"10s","ref":"R5","narr":"그때까지만 해도 정말 아무 일도 없다고 생각했어. 내가 그날 밤 기숙사 방에 잠깐 다녀왔다는 사실도 금방 잊어버릴 정도였으니까.",
-     "tech":["CAM-011","HOR-001","HOR-013"],
-     "shot":"밤의 기숙사 외관. 불 꺼진 4층 창 하나로 천천히 전진. 시청자만 불길함을 느낀다.",
-     "img":"Use R5 late at night, almost all windows dark. One window on the fourth floor with half-closed white vertical blinds is centered in the frame.",
-     "vid":"Very slow, steady push in toward the dark fourth-floor window over 10 seconds. Nothing else moves. [Push in]",
-     "snd":"밤 바람 → 드론음 아주 낮게"},
-    {"id":"C045","part":"2","kind":"T","dur":"2s","ref":"-","narr":"(쉼)","tech":["EDT-022"],"shot":"암전","img":"-","vid":"-","snd":"무음"},
-
-    {"id":"C046","part":"3","kind":"V","dur":"6s","ref":"R5","narr":"다음 날 기숙사로 돌아왔을 때 처음으로 뭔가 이상하다는 걸 느꼈어.",
-     "tech":["LGT-016","LGT-017"],
-     "shot":"흐린 낮, 기숙사 앞 경찰차와 모인 사람들. 채도 낮춤, 경광등만 색.",
-     "img":"Use R5 on a gray overcast morning, desaturated. A Korean police patrol car parked by the entrance with its light bar on, a small crowd of students standing around, faces small and indistinct.",
-     "vid":"The patrol car's lights rotate; students shift their weight and murmur; one walks in. The camera is locked off.",
-     "snd":"웅성임, 무전 소리"},
-    {"id":"C047","part":"3","kind":"V","dur":"6s","ref":"R4","narr":"우리 방이 있는 쪽에 사람들이 모여 있었고, 가까이 가보니 경찰까지 와 있었어.",
-     "tech":["CMP-016","LGT-016"],
-     "shot":"C013과 같은 복도(낮). 노란 폴리스라인이 가로지르고 경찰과 학생들.",
-     "img":"Same corridor and camera position as R4, but in grim daylight, desaturated. Yellow police tape is stretched across the corridor in the middle distance; two uniformed police officers and several students behind it, faces not in focus. The yellow tape is the only saturated color.",
-     "vid":"Students whisper to each other; an officer lifts the tape for a colleague to pass under. The camera is locked off.",
-     "snd":"웅성임, 카메라 셔터음 멀리"},
-    {"id":"C048","part":"3","kind":"V","dur":"6s","ref":"R4","narr":"처음에는 누가 다쳤거나 무슨 사고라도 난 줄 알았지.",
-     "tech":["CAM-017","CAM-001"],
-     "shot":"1인칭 핸드헬드로 사람들 사이를 비집고 앞으로.",
-     "img":"First-person view at eye level in the crowded daylight corridor, shoulders of students blocking the view, the yellow police tape ahead.",
-     "vid":"Handheld first-person movement pushing forward slowly between students' shoulders toward the tape, slight natural sway. [Handheld]",
-     "snd":"웅성임 커짐"},
-    {"id":"C049","part":"3","kind":"V","dur":"6s","ref":"-","narr":"그런데 얼마 지나지 않아 룸메이트가 죽었다는 말을 들었어.",
-     "tech":["ACT-011","EDT-019"],
-     "shot":"검은 백팩 끈이 손가락에서 미끄러져 바닥에 떨어진다.",
-     "img":"Close-up of a hand in a navy hoodie sleeve loosely holding the strap of a black backpack in a daylight corridor, desaturated.",
-     "vid":"0-3s: the hand is still. 3-6s: the fingers slowly loosen and the strap slips away; the backpack drops out of frame. Camera static.",
-     "snd":"가방 떨어지는 '툭' 뒤 소리가 확 줄어듦"},
-    {"id":"C050","part":"3","kind":"I","dur":"6s","ref":"-","narr":"살해당한 거였어.",
-     "tech":["CMP-013","SND-012"],
-     "shot":"우리 방 문. 노란 테이프가 X자로. 방 번호는 편집 합성.",
-     "img":"Front view of a closed beige metal dormitory door sealed with yellow police tape crossed in an X, gray daylight, desaturated except the tape.",
-     "vid":"(편집: 고정)","snd":"완전 무음 → 이명 시작"},
-    {"id":"C051","part":"3","kind":"V","dur":"6s","ref":"-","narr":"처음에는 무슨 말을 하는 건지 잘 이해가 되지 않았어.",
-     "tech":["CAM-020","SND-017"],
-     "shot":"1인칭 — 말하는 사복 형사의 흐릿한 모습. 목소리 먹먹.",
-     "img":"First-person view of a plain-clothes Korean detective in a dark jacket speaking in a daylight corridor, heavily out of focus, desaturated.",
-     "vid":"The blurry detective talks and gestures slightly; the image stays out of focus. Camera has a faint handheld sway.",
-     "snd":"이명 + 물속처럼 먹먹한 대사"},
-    {"id":"C052","part":"3","kind":"R","dur":"3s","ref":"-","narr":"나는 바로 전날 밤 그 방에 들어갔다 나왔으니까.",
-     "tech":["EDT-016"],
-     "shot":"C042 닫히는 문 1.5초 플래시.","img":"-","vid":"= C042 일부","snd":"-"},
-    {"id":"C053","part":"3","kind":"V","dur":"10s","ref":"R4","narr":"그래서 당연히 내가 방을 나온 뒤에 누군가 들어온 거라고 생각했어.",
-     "tech":["HOR-011","EDT-016"],
-     "shot":"'그때 믿었던 것' — 밤 복도 끝에서 검은 형체가 우리 방 문 쪽으로 걸어온다. 약간 부드러운 화질(가짜 기억).",
-     "img":"Use R4 at night, slightly soft and dreamy, lower contrast. A dark figure in black clothes and a black cap, face hidden, walks in the far distance of the corridor.",
-     "vid":"The dark figure walks slowly toward the camera and stops in front of a door on the left at 8s, reaching for the handle. The camera is locked off.",
-     "snd":"먼 발소리"},
-    {"id":"C054","part":"3","kind":"V","dur":"6s","ref":"R2","narr":"내가 있었을 때는 아무 일도 없었고, 룸메이트는 그냥 자고 있었다고 믿고 있었거든.",
-     "tech":["HOR-014","HOR-022"],
-     "shot":"'믿었던 기억' — C030과 같은 구도인데 이불이 숨 쉬듯 오르내린다. 약간 따뜻하고 부드럽게.",
-     "img":"= C030 이미지 (GPT 편집: slightly warmer and softer, dreamy)",
-     "vid":"The blanket rises and falls gently and slowly with peaceful sleeping breaths. Nothing else moves. The camera is locked off.",
-     "snd":"고른 숨소리(이 영상에만 존재)"},
-    {"id":"C055","part":"3","kind":"V","dur":"6s","ref":"-","narr":"그런데 경찰이 추정한 사망 시간을 듣고 나서 그 생각이 완전히 틀렸다는 걸 알게 됐어.",
-     "tech":["CAM-006","EDT-018"],
-     "shot":"형사의 손이 수첩에 시간을 적는다(글씨는 판독 불가하게).",
-     "img":"Close-up of a detective's hand writing in a small black notebook on a table with a ballpoint pen, handwriting illegible and blurred, gray daylight.",
-     "vid":"The pen writes a short line, stops, and taps the page once. Camera static.",
-     "snd":"펜 소리, 시계 초침"},
-    {"id":"C056","part":"3","kind":"R","dur":"8s","ref":"R2","narr":"룸메이트는 내가 방에 들어가기 전에 이미 죽어 있었어.",
-     "tech":["EDT-013","EDT-006","SND-012"],
-     "shot":"편집: C054(숨 쉬는 이불) → 정지 프레임 → C030(같은 구도, 움직임 없는 실제 이불)으로 하드컷.",
-     "img":"= C054 → C030","vid":"= C054 정지","snd":"숨소리가 뚝 끊기고 무음"},
-    {"id":"C057","part":"3","kind":"R","dur":"5s","ref":"-","narr":"그 말을 듣자 전날 밤의 기억이 한꺼번에 다시 떠올랐어. 불을 켜려다가 멈췄던 것, 침대 쪽에서 아무 소리도 들리지 않았던 것, 그리고 어둠 속에서 룸메이트가 자고 있을 거라고 혼자 단정했던 것까지.",
-     "tech":["EDT-012","EDT-017"],
-     "shot":"빠른 몽타주(각 0.5~1초), 나레이션에 맞춰: C020 멈춘 손 → C030 이불 → C036 침대 윤곽 → C042 문틈.",
-     "img":"-","vid":"= 재사용","snd":"각 컷의 원래 효과음을 짧게"},
-    {"id":"C058","part":"3","kind":"R","dur":"4s","ref":"R6","narr":"나는 룸메이트가 자는 모습을 본 적이 없었어.",
-     "tech":["ACT-011"],"shot":"C028 인터뷰(고개 숙임) 재사용.","img":"-","vid":"= C028","snd":"-"},
-    {"id":"C059","part":"3","kind":"I","dur":"4s","ref":"R3","narr":"사실 아무것도 보지 못했지.",
-     "tech":["LGT-004"],"shot":"C029 마스터 구도 정지 화면, 편집에서 블랙을 더 눌러 거의 검게.","img":"= C029 첫 프레임","vid":"-","snd":"-"},
-    {"id":"C060","part":"3","kind":"R","dur":"5s","ref":"R7","narr":"불을 켜지 않았으니까.",
-     "tech":["EDT-011"],"shot":"C001 스위치 정지(손 없음), 길게 홀드.","img":"= C001 첫 프레임","vid":"-","snd":"무음"},
-
-    {"id":"C061","part":"4","kind":"V","dur":"10s","ref":"-","narr":"경찰은 내가 방에 들어갔던 시간을 확인하면서 여러 가지를 물어봤어. 이상한 소리를 들은 적이 있는지, 평소와 다른 점은 없었는지,",
-     "tech":["CAM-002","EDT-005"],
-     "shot":"조사실 — 제보자 뒷모습 어깨너머로 맞은편 형사(초점 밖).",
-     "img":"Over-the-shoulder from behind the narrator in a navy hoodie sitting at a gray table in a small Korean police interview room, facing a plain-clothes detective across the table who is out of focus. Cold fluorescent light, desaturated.",
-     "vid":"The detective speaks and gestures with one hand, then leans back. The narrator stays still. The camera is locked off.",
-     "snd":"형광등 험, 먹먹한 대사"},
-    {"id":"C062","part":"4","kind":"V","dur":"6s","ref":"-","narr":"방 안에 다른 사람이 있는 것 같은 느낌은 없었는지 계속 물었지.",
-     "tech":["HOR-003","CAM-006"],
-     "shot":"형사가 방 평면 스케치를 테이블 위로 밀어준다.",
-     "img":"Top-down close-up of a hand-drawn pencil floor plan of a small two-bed dorm room on white paper on a gray table: the entry door at the bottom, two wardrobes beside the door, two desks, two beds at the top near the window. No words, no labels, no numbers.",
-     "vid":"A detective's hand slides the paper slowly across the table toward the camera and lets go. Camera static, top-down.",
-     "snd":"종이 마찰음"},
-    {"id":"C063","part":"4","kind":"V","dur":"6s","ref":"-","narr":"나는 전부 없었다고 대답했어.",
-     "tech":["ACT-008"],
-     "shot":"테이블 위 깍지 낀 손, 엄지가 서로를 문지른다.",
-     "img":"Close-up of hands in navy hoodie sleeves clasped together on a gray table, cold light.",
-     "vid":"The thumbs rub against each other nervously, then stop. Camera static.",
-     "snd":"-"},
-    {"id":"C064","part":"4","kind":"R","dur":"4s","ref":"R6","narr":"정말 아무것도 몰랐거든.",
-     "tech":[],"shot":"C003 인터뷰 정지.","img":"= C003","vid":"-","snd":"-"},
-    {"id":"C065","part":"4","kind":"V","dur":"6s","ref":"-","narr":"그런데 조사 과정에서 더 끔찍한 이야기를 들었어.",
-     "tech":["CAM-011","ACT-002"],
-     "shot":"C061 구도에서 천천히 전진, 흐릿한 형사가 앞으로 몸을 숙인다.",
-     "img":"= C061 이미지",
-     "vid":"The out-of-focus detective leans forward over the table; the camera pushes in slowly over the narrator's shoulder. [Push in]",
-     "snd":"드론음 상승"},
-    {"id":"C066","part":"4","kind":"V","dur":"6s","ref":"-","narr":"경찰은 내가 방에 들어갔을 당시 범인이 아직 그 안에 있었을 가능성이 높다고 했어.",
-     "tech":["CAM-006","HOR-010"],
-     "shot":"★평면도 위 펜이 '문 왼쪽 틈'에 동그라미를 그리고 두 번 톡톡.",
-     "img":"= C062 이미지 (펜을 든 손 추가)",
-     "vid":"A pen moves to the bottom-left corner of the floor plan, right beside the door, slowly draws a circle around that narrow spot, then taps it twice. Camera static, top-down.",
-     "snd":"연필 원 그리는 소리, 톡톡"},
-    {"id":"C067","part":"4","kind":"R","dur":"4s","ref":"R6","narr":"처음에는 무슨 말인지 이해가 안 됐어.",
-     "tech":[],"shot":"C028 인터뷰 재사용.","img":"-","vid":"= C028","snd":"-"},
-    {"id":"C068","part":"4","kind":"I","dur":"5s","ref":"R2","narr":"범인이 방 안에 있었다면 내가 봤어야 하는 거 아닌가 싶었지.",
-     "tech":["CAM-001","HOR-023"],
-     "shot":"C036 1인칭 침대 윤곽 정지 — 여전히 아무것도 안 보인다.","img":"= C036","vid":"-","snd":"-"},
-    {"id":"C069","part":"4","kind":"T","dur":"3s","ref":"-","narr":"그러다가 깨달았어.",
-     "tech":["EDT-022","SND-012"],"shot":"암전","img":"-","vid":"-","snd":"무음"},
-    {"id":"C070","part":"4","kind":"R","dur":"4s","ref":"R7","narr":"나는 그날 밤 불을 한 번도 켜지 않았어.",
-     "tech":["EDT-017"],"shot":"C001 스위치 정지. 하단 자막: ※ 경찰 추정을 바탕으로 한 재구성 화면입니다","img":"= C001 첫 프레임","vid":"-","snd":"-"},
-
-    {"id":"C071","part":"5","kind":"V","dur":"10s","ref":"R2","narr":"방에 들어가서 책상까지 걸어가고,",
-     "tech":["CAM-002","HOR-022","CMP-009"],
-     "shot":"C023 재구성 — 같은 구도인데 화면 왼쪽 전경에 초점 밖 검은 어깨와 뒤통수. 카메라는 처음부터 범인 바로 옆에 있었다.",
-     "img":"= C023 이미지를 GPT 편집: 'Edit this exact image. Keep everything identical. Add, in the immediate left foreground and out of focus, the dark shoulder and the back of the head of another person in a black cap standing motionless in the corner, facing the doorway. Raise the exposure slightly, colder and more monochrome.'",
-     "vid":"0-4s: the silhouette in the doorway steps inside. 4-9s: they slowly close the door; the light shrinks and disappears. The out-of-focus figure in the foreground does not move at all, not even breathing. The camera is completely locked off.",
-     "snd":"C023 소리 그대로 + 반향 (SND-016)"},
-    {"id":"C072","part":"5","kind":"V","dur":"10s","ref":"R3","narr":"물건을 찾고, 옷을 챙기고,",
-     "tech":["CAM-004","CMP-017","LGT-004","HOR-012"],
-     "shot":"★C029 재구성 — 같은 마스터 구도, 노출을 올리면 문 왼쪽 틈에 서 있는 사람이 보인다. 제보자는 등을 돌리고 서랍을 뒤진다.",
-     "img":"= C029 이미지를 GPT 편집 (01_연출노트 6장 문구 사용)",
-     "vid":"The person at the right desk quietly rummages in the drawer. The dark figure standing in the recess beside the door stays perfectly motionless for the whole clip; only at 8s its head turns very slightly toward the person at the desk. The camera is completely locked off and does not move or zoom. [Static shot]",
-     "snd":"C029/C027 서랍 소리 재사용 + 반향"},
-    {"id":"C073","part":"5","kind":"V","dur":"10s","ref":"R3","narr":"다시 문을 열고 나갈 때까지 계속 어둠 속에 있었어.",
-     "tech":["CMP-015","ACT-002","CAM-004"],
-     "shot":"같은 마스터 구도 — 제보자가 문으로 걸어가 범인과 팔 하나 거리로 스친다. 범인은 움직이지 않는다.",
-     "img":"= C072 이미지",
-     "vid":"0-6s: the person with the backpack walks from the right desk to the door, passing within arm's reach of the motionless figure in the recess without noticing it. 6-10s: the person opens the door a little, slips out and the door closes. The figure never moves. The camera is completely locked off.",
-     "snd":"발소리, 문 — 2부 소리 재사용"},
-    {"id":"C074","part":"5","kind":"V","dur":"6s","ref":"R2","narr":"나는 몇 분 동안 그 방 안을 돌아다녔고, 범인은 어딘가에 숨어서 내가 들어온 사실을 알고 있었던 거야.",
-     "tech":["CMP-019","CAM-020","ACT-005"],
-     "shot":"범인 신체 일부 — 모자 챙 아래 그림자 진 턱선과 어깨만(눈·얼굴 없음). 뒤로 초점 밖 제보자가 움직인다.",
-     "img":"Extreme close-up in near darkness of the side of a person's jaw and shoulder under the brim of a black cap, face in deep shadow and unreadable, pressed against an off-white wall. In the far out-of-focus background a person in a navy hoodie is at a desk.",
-     "vid":"The figure in the foreground stays completely still, not even breathing. The blurred person in the background moves around the desk. Focus slowly shifts from the foreground figure to the background person. [Static shot]",
-     "snd":"가까운 곳의 아주 작은 숨 1회"},
-    {"id":"C075","part":"5","kind":"V","dur":"6s","ref":"R2","narr":"내가 서랍을 여는 소리도, 방 안을 돌아다니는 소리도 들었겠지.",
-     "tech":["CAM-001","SND-016","HOR-013"],
-     "shot":"범인 시점 — 문 옆 구석에서 2m 앞 제보자의 등.",
-     "img":"Point of view from the dark corner beside the door of a dorm room at night: about two meters away the narrator in a navy hoodie is crouched at the right-side desk with their back turned, opening a drawer, faint moonlight.",
-     "vid":"The narrator slowly pulls the drawer open and searches inside, never turning around. The point of view stays perfectly still at standing eye height. [Static shot]",
-     "snd":"서랍 소리 — 범인 위치에서 들리는 공간감"},
-    {"id":"C076","part":"5","kind":"I","dur":"6s","ref":"R2","narr":"그런데 나는 바로 옆 어딘가에 다른 사람이 있다는 것조차 모르고 있었어.",
-     "tech":["HOR-013","CMP-008"],
-     "shot":"C036 재구성 — 침대만 보던 1인칭 화면 왼쪽 끝 틈에 서 있는 사람.",
-     "img":"= C036 이미지를 GPT 편집 (01_연출노트 6장 문구)",
-     "vid":"(편집: 고정 6초)","snd":"무음"},
-
-    {"id":"C077","part":"6","kind":"R","dur":"5s","ref":"R6","narr":"그리고 경찰에게 마지막 이야기를 들었어.",
-     "tech":[],"shot":"C003 인터뷰 영상 재사용.","img":"-","vid":"= C003","snd":"-"},
-    {"id":"C078","part":"6","kind":"V","dur":"6s","ref":"-","narr":"방 안에서 글씨 하나가 발견됐다고 했어.",
-     "tech":["HOR-009","EDT-020"],
-     "shot":"형사가 사진 한 장을 뒤집힌 채 테이블 위로 밀어준다. 내용은 아직 안 보여준다.",
-     "img":"Close-up on a gray table in a police interview room: a detective's hand placing a printed photograph face down, the white back of the photo visible.",
-     "vid":"The hand slides the face-down photo slowly across the table and keeps two fingers on it. Camera static.",
-     "snd":"종이 마찰"},
-    {"id":"C079","part":"6","kind":"V","dur":"6s","ref":"R7","narr":"내가 그날 밤 불을 켰다면 볼 수 있었을 곳에",
-     "tech":["HOR-014","ACT-009"],
-     "shot":"★C001 변주 — 이번엔 손가락이 스위치를 누른다(상상).",
-     "img":"= C001 첫 프레임",
-     "vid":"0-3s: a hand enters from the right and reaches the switch. 3-4s: the finger presses the switch down firmly. 4-6s: cool white light floods over the wall and the switch. The camera is completely locked off.",
-     "snd":"'딸깍' → 형광등 '팅…팅…'"},
-    {"id":"C080","part":"6","kind":"V","dur":"6s","ref":"R1","narr":"이런 문장이 적혀 있었다고 해.",
-     "tech":["LGT-010","LGT-012"],
-     "shot":"문간 1인칭 — 형광등이 깜빡이다 켜지며 방이 드러난다(R2 → R1 상태). 창 아래 벽은 아직 빈 벽.",
-     "img":"= R2 (밤, 문간) — 첫 프레임",
-     "vid":"The ceiling fluorescent light flickers twice and then turns fully on, revealing the whole room in flat white light. The camera is completely locked off.",
-     "snd":"형광등 점등음"},
-    {"id":"C081","part":"6","kind":"I","dur":"7s","ref":"R1","narr":"“불을 켜지 않아서 다행이지?”",
-     "tech":["EDT-011","HOR-004","LGT-002"],
-     "shot":"★불 켜진 방 정면 — 창 아래 빈 벽에 손글씨 '불을 켜지 않아서 다행이지?'(편집 합성). 왼쪽 침대 이불은 그대로. 스팅어 없이 무음 홀드.",
-     "img":"Use R1 at night with the ceiling fluorescent light on, flat harsh white light, the window blinds dark behind. The left bed has the still blanket lump with the head covered. The bare wall below the window between the two beds is empty (text will be added in editing).",
-     "vid":"(편집: 고정 + 글씨 합성)","snd":"형광등 험만"},
-    {"id":"C082","part":"6","kind":"V","dur":"6s","ref":"R3","narr":"그 말을 듣고 나서야 내가 그날 밤 어떤 상황에 있었는지 제대로 이해했어.",
-     "tech":["CMP-015","LGT-002","ACT-012"],
-     "shot":"★클라이맥스 — 창가에서 문 쪽을 본 불 켜진 방. 스위치에서 팔 하나 거리, 문 왼쪽 틈에 범인이 서 있다. 얼굴은 모자 그림자.",
-     "img":"Use R3 composition at eye level instead of high angle, ceiling light on, harsh flat white light. In the narrow recess to the left of the closed door, a motionless adult in black clothes and a black cap stands upright against the wall, face entirely in the shadow of the cap brim, arms down, no weapon visible. The light switch to the right of the door is about one arm's length from them.",
-     "vid":"The figure stays completely still. Only the fluorescent light flickers once at 3s. The camera is completely locked off. [Static shot]",
-     "snd":"형광등 험, 한 번 깜빡일 때 '지직'"},
-    {"id":"C083","part":"6","kind":"I","dur":"5s","ref":"R1","narr":"룸메이트는 이미 죽어 있었고, 범인은 내가 방 안에 들어왔다는 걸 알고 있었어.",
-     "tech":["CAM-004","LGT-002"],
-     "shot":"밝은 빛 아래 왼쪽 침대, 이불이 머리까지. 잔혹 묘사 없음.",
-     "img":"Medium shot of the left bed under harsh fluorescent light: the gray navy-striped blanket covers a body-shaped lump entirely including the head, perfectly still. Clean, no blood, nothing graphic.",
-     "vid":"(편집: 고정)","snd":"-"},
-    {"id":"C084","part":"6","kind":"R","dur":"6s","ref":"R7","narr":"만약 내가 평소처럼 아무 생각 없이 스위치를 눌렀다면 어떻게 됐을지는 지금도 생각하고 싶지 않아.",
-     "tech":["LGT-011","EDT-022","EDT-017"],
-     "shot":"불이 꺼지듯 암전 → C001 스위치 앞에서 멈춘 손(현실)으로 복귀.",
-     "img":"-","vid":"= C001 (4~10초 구간)","snd":"소등 '딸깍' → 무음"},
-    {"id":"C085","part":"6","kind":"V","dur":"6s","ref":"R6","narr":"그날 내가 불을 켜지 않은 건 뭔가 이상한 낌새를 느꼈기 때문이 아니었어.",
-     "tech":["ACT-004","HOR-024"],
-     "shot":"인터뷰 실루엣이 고개를 돌려 옆 벽의 스위치를 본다.",
-     "img":"= C003 이미지 (R6의 스위치가 보이는 구도)",
-     "vid":"The silhouetted person slowly turns their head toward the light switch on the side wall and holds the gaze. The camera is locked off.",
-     "snd":"인터뷰 룸톤"},
-    {"id":"C086","part":"6","kind":"V","dur":"15s","ref":"R1","narr":"그냥 잠들어 있는 룸메이트를 깨우고 싶지 않았던 것뿐이야.",
-     "tech":["LGT-002","CAM-011","HOR-024"],
-     "shot":"현재의 빈 방 — 낮, 매트리스만 남은 침대 두 개, 아무것도 없는 벽. 스위치 쪽으로 천천히 전진하다 암전. 엔딩 카드로.",
-     "img":"Use R1 composition in bright daylight, the room completely emptied: two bare mattresses, empty desks, empty wardrobes open, nothing on the walls. Calm, bright, silent.",
-     "vid":"Very slow push in toward the door and the light switch beside it over 15 seconds. Nothing moves. Dust particles drift in the sunlight. [Push in]",
-     "snd":"바깥 새소리 작게 → 암전 무음"}
+ "episode": "EP01 불을 켜지 않은 밤",
+ "tts_overrides": {
+  "C079": [
+   333.9,
+   336.8
+  ],
+  "C080": [
+   336.8,
+   339.1
+  ],
+  "C081": [
+   339.1,
+   341.1
+  ],
+  "C082": [
+   341.1,
+   346.5
+  ],
+  "C083": [
+   346.5,
+   352.3
+  ],
+  "C084": [
+   352.3,
+   359.1
   ]
+ },
+ "video_suffix": "Realistic natural motion. No new people appear. Nothing else in the frame moves.",
+ "parts": {
+  "0": "콜드오픈",
+  "1": "1부 · 평소",
+  "2": "2부 · 그날 밤",
+  "3": "3부 · 다음 날",
+  "4": "4부 · 조사",
+  "5": "5부 · 재구성 (경찰 추정)",
+  "6": "6부 · 만약 불을 켰다면"
+ },
+ "cuts": [
+  {
+   "id": "C001",
+   "part": "0",
+   "kind": "V",
+   "dur": "10s",
+   "ref": "R7 + P1",
+   "narr": "(나레이션 없음 · 룸톤만)",
+   "tech": [
+    "CAM-006",
+    "ACT-012",
+    "LGT-001",
+    "SND-012"
+   ],
+   "shot": "어둠 속 스위치 극근경. 손이 들어와 1cm 앞에서 멈춘다. 끝에 손글씨 자막 '불을 켜지 않아서 다행이지?'를 편집으로 1.5초 띄운다.",
+   "img": "Use R7 as is.",
+   "vid": "0-4s: a young man's hand in a black zip-up fleece jacket sleeve slowly enters from the left edge, fingers reaching toward the switch. 4-7s: it stops about one centimeter before touching and trembles very slightly. 7-10s: it holds perfectly still. The camera is completely locked off and does not move or zoom. [Static shot]",
+   "snd": "룸톤 → 손이 멈추는 순간 완전 무음"
+  },
+  {
+   "id": "C002",
+   "part": "0",
+   "kind": "T",
+   "dur": "4s",
+   "ref": "-",
+   "narr": "(없음)",
+   "tech": [
+    "EDT-022"
+   ],
+   "shot": "검은 화면에 제목 「불을 켜지 않은 밤」과 작은 자막 '제보자 A씨 · 대학 기숙사'. 이 컷이 끝나는 지점(00:14)에 TTS를 시작한다.",
+   "img": "-",
+   "vid": "-",
+   "snd": "저음 패드 시작"
+  },
+  {
+   "id": "C003",
+   "part": "1",
+   "kind": "V",
+   "dur": "6s",
+   "ref": "R6",
+   "narr": "이건 내가 대학 기숙사에서 룸메이트와 같이 살 때 있었던 일이야.",
+   "tech": [
+    "LGT-014",
+    "CAM-003"
+   ],
+   "shot": "익명 인터뷰 실루엣(제보자 체형). 다큐 톤 선언.",
+   "img": "Use R6.",
+   "vid": "The silhouetted man sits almost still; shoulders rise and fall with slow breathing; at 4s his interlocked fingers slowly tighten once. Very slow push in toward the silhouette. [Push in]",
+   "snd": "인터뷰 룸 룸톤",
+   "tts": [
+    0.0,
+    4.1
+   ]
+  },
+  {
+   "id": "C004",
+   "part": "1",
+   "kind": "V",
+   "dur": "(C003과 겹침)",
+   "ref": "R5",
+   "narr": "(C003 나레이션 뒷부분에 겹쳐 컷 전환)",
+   "tech": [
+    "CAM-005"
+   ],
+   "shot": "기숙사 외관 해질녘 설정샷. 창문 불이 하나둘 켜진다. C003 나레이션 후반 2초에 겹친다.",
+   "img": "Use R5 at dusk under an overcast sky, about half the windows lit, a few students walking on the footpath.",
+   "vid": "Window lights turn on one by one across the facade; two students walk slowly along the path. The camera is completely locked off.",
+   "snd": "저녁 외부 환경음"
+  },
+  {
+   "id": "C005",
+   "part": "1",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R1-day",
+   "narr": "우리는 침대와 책상이 두 개씩 놓인 평범한 2인실을 쓰고 있었어.",
+   "tech": [
+    "CMP-002",
+    "CMP-016"
+   ],
+   "shot": "방 전경(문간 시점, 낮). 시청자에게 방 지도를 심는 컷. 편집에서 아주 느린 확대.",
+   "img": "Use R1-day.",
+   "vid": "(편집: 3% 확대)",
+   "snd": "낮 룸톤, 먼 복도 웃음소리",
+   "tts": [
+    4.1,
+    8.9
+   ]
+  },
+  {
+   "id": "C006",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R1 + P2",
+   "narr": "서로 생활 패턴도 어느 정도 알고 있어서 한 명이 늦게 들어오는 날에는 굳이 기다리지 않고 먼저 자는 경우도 많았지.",
+   "tech": [
+    "ACT-018",
+    "CAM-002"
+   ],
+   "shot": "룸메이트 뒷모습 — 오른쪽 책상, 모니터 불빛, 헤드폰. 얼굴은 보이지 않는다.",
+   "img": "(R1 + P2 첨부) Same dorm room and same evening lighting as the first reference image. The roommate from the second reference image (stocky young man, short brown hair, dark green hoodie, heather gray sweatpants) sits at the right-side desk in front of the glowing monitor wearing headphones, seen from behind and slightly to the side, face not visible. Camera a few steps inside the room, eye level.",
+   "vid": "He types slowly, reaches for a water bottle, takes a sip and puts it back. His face stays turned away from the camera the whole time. The camera is completely locked off.",
+   "snd": "키보드 소리, 헤드폰 새는 음악 아주 작게",
+   "tts": [
+    8.9,
+    16.7
+   ]
+  },
+  {
+   "id": "C007",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R1 + P1",
+   "narr": "그날 저녁에는 내가 친구들을 만나러 나갔고, 룸메이트는 기숙사에 남아 있었어.",
+   "tech": [
+    "CAM-001",
+    "CMP-009"
+   ],
+   "shot": "1인칭 — 문간에서 회색 러닝화 끈을 묶는 손. 뒤쪽 흐릿하게 책상 앞 룸메이트.",
+   "img": "(R1 + P1 + P2 첨부) First-person view looking down at the narrator's own hands tying gray running sneakers near the room door, black zip-up fleece jacket sleeves and blue jeans visible. In the soft-focus background the roommate in a dark green hoodie sits at the right-side desk with his back turned.",
+   "vid": "0-4s: the hands finish tying the laces. 4-6s: the view rises as the person stands up, slight natural handheld motion. The roommate in the background stays still at the desk.",
+   "snd": "끈 묶는 소리",
+   "tts": [
+    16.7,
+    22.5
+   ]
+  },
+  {
+   "id": "C008",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4 + P2",
+   "narr": "나가기 전에 특별한 얘기를 나눈 것도 없었고, 정말 평소와 다를 게 없는 날이었어.",
+   "tech": [
+    "CMP-007",
+    "EDT-008",
+    "HOR-022"
+   ],
+   "shot": "복도에서 본 닫히는 문. 문틈 속 방 불빛과 룸메이트 뒷모습 — 살아 있는 그의 마지막 모습. C042와 같은 구도로 짝을 맞춘다.",
+   "img": "(R4 + P2 첨부) In the same dormitory corridor, a close view toward a wooden dorm room door that is half open inward. Through the gap, inside the room, the roommate in a dark green hoodie sits at his desk in warm lamp and monitor light with his back to camera. The corridor is lit by dim fluorescent light.",
+   "vid": "The door slowly swings closed; the vertical gap of warm light narrows steadily until the door shuts completely at 5s. The camera is completely locked off. [Static shot]",
+   "snd": "문 닫힘 '딸깍' → 복도 형광등 험",
+   "tts": [
+    22.5,
+    27.9
+   ]
+  },
+  {
+   "id": "C009",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "친구들과 시간을 보내다 보니 어느새 밤이 꽤 늦었어.",
+   "tech": [
+    "CAM-020",
+    "LGT-015"
+   ],
+   "shot": "대학가 바 테이블, 친구들은 아웃포커스. 따뜻한 보케. 1부의 마지막 '따뜻한 색'.",
+   "img": "Shallow depth of field shot of a busy American college bar table at night: beer glasses, a pitcher and a basket of fries sharp in the foreground, three friends laughing out of focus behind, warm string-light bokeh.",
+   "vid": "The out-of-focus friends laugh and gesture; a hand sets down a glass in the foreground; the bokeh lights shimmer. Gentle handheld drift.",
+   "snd": "웅성임, 잔 부딪힘",
+   "tts": [
+    27.9,
+    32.1
+   ]
+  },
+  {
+   "id": "C010",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P1",
+   "narr": "그러다 기숙사 방에 두고 온 물건이 하나 필요하다는 걸 깨달았지.",
+   "tech": [
+    "ACT-008",
+    "CAM-006"
+   ],
+   "shot": "백팩 안을 뒤지던 손이 멈춘다. 물건은 끝까지 특정하지 않는다.",
+   "img": "Close-up of hands in black fleece jacket sleeves rummaging inside an open black backpack on a bar bench, warm light.",
+   "vid": "0-3s: the hands search through the bag. 3-6s: they stop, and the fingers rest still on the edge of the bag. Camera static.",
+   "snd": "가방 뒤지는 소리, 배경 웅성임 작아짐",
+   "tts": [
+    32.1,
+    36.2
+   ]
+  },
+  {
+   "id": "C011",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R5",
+   "narr": "다음 날 아침에 가져와도 되는 물건이었는데, 그때는 별생각이 없었어. 기숙사가 멀리 있는 것도 아니었고, 잠깐 들어가서 물건만 챙겨 나오면 되는 일이었으니까.",
+   "tech": [
+    "CAM-005",
+    "CAM-011"
+   ],
+   "shot": "늦은 밤 캠퍼스 길. 가로등이 줄지어 있고 멀리 기숙사.",
+   "img": "Empty American college campus footpath late at night, a row of street lamps leading toward the distant dormitory building from R5 with only a few lit windows, cold air, no people.",
+   "vid": "Very slow steady push forward along the path toward the distant building over the whole clip. A few leaves drift across the path. [Push in]",
+   "snd": "밤 바람, 먼 차 소리",
+   "tts": [
+    36.2,
+    47.6
+   ]
+  },
+  {
+   "id": "C012",
+   "part": "1",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R5 + P1",
+   "narr": "그래서 혼자 기숙사로 돌아갔어.",
+   "tech": [
+    "CMP-011",
+    "CAM-005"
+   ],
+   "shot": "기숙사 입구로 걸어가는 작은 뒷모습.",
+   "img": "Use R5 at night. Add a small figure of the narrator (black zip-up fleece jacket, jeans, black backpack) on the footpath, seen from behind, walking toward the lit glass entrance.",
+   "vid": "The small figure walks slowly away from the camera toward the glass entrance and goes inside at 5s. A moth circles the entrance lamp. The camera is completely locked off.",
+   "snd": "발소리, 출입문",
+   "tts": [
+    47.6,
+    50.4
+   ]
+  },
+  {
+   "id": "C013",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "시간이 늦어서 건물 안은 조용했어.",
+   "tech": [
+    "CMP-002",
+    "CMP-004",
+    "CAM-023",
+    "SND-004"
+   ],
+   "shot": "텅 빈 복도 1점 투시 롱홀드. 아무것도 일어나지 않는다. (나레이션보다 길게 잡고 다음 문장 앞부분까지 끌어도 좋다)",
+   "img": "Use R4 as is.",
+   "vid": "Nothing happens. Only the nearest ceiling light flickers very slightly once at 4s. The camera is completely locked off and does not move or zoom. [Static shot]",
+   "snd": "형광등 험만",
+   "tts": [
+    50.4,
+    53.4
+   ]
+  },
+  {
+   "id": "C014",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "낮에는 복도에서 사람들 목소리도 들리고 문 여닫는 소리도 계속 나는데,",
+   "tech": [
+    "HOR-014",
+    "EDT-016"
+   ],
+   "shot": "같은 복도의 낮 — 학생들이 오가는 모습. 회상처럼 디졸브.",
+   "img": "(R4 첨부) Edit this exact image: same corridor, same camera position, but in the daytime with all ceiling lights on and brighter; several college students walking and chatting, one door half open. Faces small and natural.",
+   "vid": "(편집: 디졸브 인/아웃)",
+   "snd": "낮 웅성임 (다음 컷까지 끌다 끊음)",
+   "tts": [
+    53.4,
+    58.5
+   ]
+  },
+  {
+   "id": "C015",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4 + P1",
+   "narr": "그때는 대부분 자기 방에 들어간 뒤라 인기척이 거의 없더라고.",
+   "tech": [
+    "CAM-018",
+    "CAM-010"
+   ],
+   "shot": "제보자 뒷모습을 일정 거리로 따라가는 매끄러운 추적.",
+   "img": "(R4 + P1 첨부) Same corridor, the narrator from the reference (messy brown hair, black zip-up fleece jacket, jeans, black backpack) seen from behind in the middle of the corridor, a few meters ahead of the camera.",
+   "vid": "The man walks steadily down the corridor away from the camera; the camera follows behind at a constant distance with a perfectly smooth glide; doors pass on both sides. [Tracking shot]",
+   "snd": "카펫 위 둔한 발소리",
+   "tts": [
+    58.5,
+    63.0
+   ]
+  },
+  {
+   "id": "C016",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4 + P1",
+   "narr": "우리 방 앞에 도착해서",
+   "tech": [
+    "ACT-009",
+    "CAM-006"
+   ],
+   "shot": "문손잡이·열쇠 근접. 방 번호는 편집에서 합성.",
+   "img": "Close-up of a wooden dorm room door with a brushed metal lever handle and key lock, a hand in a black fleece jacket sleeve holding a key in the lock, dim fluorescent corridor light.",
+   "vid": "The hand turns the key slowly, presses the lever down, and the door starts to open inward. Camera static.",
+   "snd": "열쇠, 손잡이 '철컥'",
+   "tts": [
+    63.0,
+    65.6
+   ]
+  },
+  {
+   "id": "C017",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "문을 열었는데, 안은 완전히 어두웠어.",
+   "tech": [
+    "CMP-013",
+    "LGT-009",
+    "CAM-002"
+   ],
+   "shot": "어깨너머 — 안쪽·왼쪽으로 열리는 문, 바닥 카펫에 쐐기 모양 복도 빛. 오른쪽 옷장 문은 살짝 열려 있다(아무도 신경 쓰지 않는다).",
+   "img": "(R2 + P1 첨부) Over-the-shoulder shot from the corridor past the narrator's shoulder in a black fleece jacket: the same dorm room as the reference, the door swung open inward to the left, the room completely dark with the desk lamp off. A wedge of dim corridor light falls across the dark carpet, reaching the legs of the two desks; beyond it near-total darkness. On the right, the tall wooden wardrobe beside the doorway has one door slightly ajar with a black gap.",
+   "vid": "0-3s: the door finishes swinging open and gently stops. 3-6s: hold. The man's shoulder stays still. The darkness inside does not change at all. The camera is completely locked off.",
+   "snd": "문 끼익(작게) → 복도 험이 방 안 룸톤에 먹힘",
+   "tts": [
+    65.6,
+    67.8
+   ]
+  },
+  {
+   "id": "C018",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "나는 룸메이트가 이미 자고 있다고 생각했지.",
+   "tech": [
+    "CAM-001",
+    "CMP-018"
+   ],
+   "shot": "문간 1인칭 — 빛 쐐기 끝에 희미한 오른쪽 침대 윤곽과 이불 덩어리.",
+   "img": "Use R2 from the doorway at eye level with the wedge of corridor light on the carpet; only the faint outline of the right bed with a still lump under the light gray fleece blanket is readable.",
+   "vid": "(편집: 아주 느린 확대)",
+   "snd": "무음에 가까운 룸톤",
+   "tts": [
+    67.8,
+    70.9
+   ]
+  },
+  {
+   "id": "C019",
+   "part": "2",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "문 바로 옆에 전등 스위치가 있었기 때문에 처음에는 당연히 불을 켜려고 했어.",
+   "tech": [
+    "EDT-017"
+   ],
+   "shot": "C001 이미지 정지 화면 (손 없음).",
+   "img": "= C001 첫 프레임",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    70.9,
+    76.8
+   ]
+  },
+  {
+   "id": "C020",
+   "part": "2",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "실제로 손까지 뻗었는데, 스위치를 누르기 직전에 멈췄어.",
+   "tech": [
+    "EDT-017",
+    "HOR-014",
+    "ACT-012"
+   ],
+   "shot": "C001 영상 재사용 — 콜드오픈의 의미가 여기서 연결된다.",
+   "img": "-",
+   "vid": "= C001",
+   "snd": "멈추는 순간 무음",
+   "tts": [
+    76.8,
+    81.2
+   ]
+  },
+  {
+   "id": "C021",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "룸메이트가 자고 있을 텐데 굳이 깨울 필요가 있나 싶었던 거야.",
+   "tech": [
+    "ACT-008"
+   ],
+   "shot": "스위치 앞 손이 천천히 거둬진다.",
+   "img": "= C001 마지막 프레임 (손이 스위치 앞에 떠 있는 상태)",
+   "vid": "The hand hovering near the switch slowly pulls back and drops out of the bottom of the frame by 4s. The switch remains in the strip of light. The camera is completely locked off.",
+   "snd": "옷 스침",
+   "tts": [
+    81.2,
+    85.8
+   ]
+  },
+  {
+   "id": "C022",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R1-day",
+   "narr": "어차피 필요한 물건이 어디에 있는지도 알고 있었고, 매일 생활하던 방이니까 불을 켜지 않아도 찾을 수 있을 것 같았어.",
+   "tech": [
+    "EDT-016",
+    "LGT-012"
+   ],
+   "shot": "기억 속 밝은 '내 책상'(왼쪽) 1초 → 같은 구도의 어둠으로 디졸브.",
+   "img": "(R1 첨부) Medium shot of the left-side desk from the reference room (desk lamp, closed laptop, books, water bottle, drawers) in bright ordinary daylight. Then a second version of exactly the same frame at night in darkness with the lamp off and only faint moonlight.",
+   "vid": "(편집: 밝은 판 → 어두운 판 디졸브)",
+   "snd": "-",
+   "tts": [
+    85.8,
+    93.2
+   ]
+  },
+  {
+   "id": "C023",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "그래서 그냥 어두운 채로 들어갔어.",
+   "tech": [
+    "LGT-007",
+    "LGT-014",
+    "CAM-003",
+    "CMP-007",
+    "HOR-013"
+   ],
+   "shot": "오른쪽 옷장 문틈 바로 옆 낮은 위치에서 본 문간. 전경 오른쪽 가장자리에 옷장 문 모서리가 흐릿하게 걸린다. 복도빛 역광 실루엣이 들어와 문을 닫는다. 5부에서 이 자리가 누구 시점이었는지 드러난다.",
+   "img": "From inside a dark dorm room, from a low position right beside a tall wooden wardrobe next to the entry door, looking toward the open doorway: the out-of-focus edge of the wardrobe door frames the right side of the shot. The narrator stands as a black silhouette in the doorway with dim fluorescent corridor light behind him. The room interior is in deep shadow.",
+   "vid": "0-3s: the silhouette steps inside. 3-6s: he slowly closes the door behind him; the light shrinks to a thin line and disappears, leaving near-darkness with faint blue moonlight. The camera is completely locked off. [Static shot]",
+   "snd": "문 닫힘(아주 조심스럽게), 복도 험 차단",
+   "tts": [
+    93.2,
+    96.0
+   ]
+  },
+  {
+   "id": "C024",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "문을 닫고 몇 걸음 들어가니까 처음에는 정말 아무것도 보이지 않았어. 밝은 복도에서 바로 들어와서 눈이 어둠에 익숙하지 않았던 것 같아.",
+   "tech": [
+    "LGT-004",
+    "CAM-001",
+    "HOR-019"
+   ],
+   "shot": "거의 검은 화면에서 방 윤곽이 서서히 떠오른다 = 눈이 적응하는 과정. 편집에서 노출 램프.",
+   "img": "Use R2 from two steps inside the room, eye level, facing the window and the two beds (generate slightly brighter; darken in edit).",
+   "vid": "(편집: 블랙 → 노출 서서히 올림)",
+   "snd": "자기 숨소리(가깝게)",
+   "tts": [
+    96.0,
+    105.7
+   ]
+  },
+  {
+   "id": "C025",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "나는 손으로 책상 위치를 더듬으면서 내 자리까지 갔어.",
+   "tech": [
+    "ACT-008",
+    "SND-005",
+    "CAM-006"
+   ],
+   "shot": "푸른 달빛 속 책상 모서리를 더듬는 손.",
+   "img": "Close-up in near darkness lit only by faint blue moonlight: a hand in a black fleece jacket sleeve resting on the edge of a light wooden dorm desk, fingertips feeling the surface.",
+   "vid": "The hand slides slowly along the desk edge, fingertips feeling the way, and stops at the back of a chair. The camera tracks slowly alongside the hand.",
+   "snd": "손끝 마찰음",
+   "tts": [
+    105.7,
+    110.1
+   ]
+  },
+  {
+   "id": "C026",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "혹시라도 룸메이트를 깨울까 봐 의자를 건드리지 않으려고 조심했고,",
+   "tech": [
+    "CAM-007",
+    "ACT-013"
+   ],
+   "shot": "바닥 높이 — 의자 다리 사이로 조심스럽게 디디는 회색 러닝화.",
+   "img": "Ground-level shot in a dark dorm room lit by faint moonlight: gray running sneakers and jeans next to the legs of a desk chair on dark carpet.",
+   "vid": "One foot lifts and steps carefully around the chair leg without touching it, then the other follows slowly. The camera is locked at floor level.",
+   "snd": "카펫 위 발소리",
+   "tts": [
+    110.1,
+    114.5
+   ]
+  },
+  {
+   "id": "C027",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "서랍을 열 때도 최대한 소리를 내지 않았지.",
+   "tech": [
+    "SND-005",
+    "CAM-006"
+   ],
+   "shot": "서랍이 1cm씩 열리는 근접.",
+   "img": "Close-up of a light wooden desk drawer with a small metal knob in darkness, fingers on the knob, faint moonlight.",
+   "vid": "The fingers pull the drawer open very slowly, a few centimeters at a time, pausing between pulls. Camera static.",
+   "snd": "서랍 레일 '스르륵'(이 소리가 5부에서 다시 쓰임)",
+   "tts": [
+    114.5,
+    117.6
+   ]
+  },
+  {
+   "id": "C028",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "지금 생각하면 그게 참 이상해.",
+   "tech": [
+    "ACT-011",
+    "EDT-010"
+   ],
+   "shot": "인터뷰 실루엣 — 고개를 천천히 숙인다.",
+   "img": "= C003 이미지",
+   "vid": "The silhouetted man slowly lowers his head and stays still. Camera static.",
+   "snd": "인터뷰 룸톤",
+   "tts": [
+    117.6,
+    120.5
+   ]
+  },
+  {
+   "id": "C029",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R3",
+   "narr": "그때 나는 방 안에 있는 사람이 룸메이트 한 명뿐이라고 너무 당연하게 생각하고 있었거든.",
+   "tech": [
+    "CAM-008",
+    "CAM-004",
+    "HOR-012",
+    "CMP-010"
+   ],
+   "shot": "★마스터 구도(밤). 창가 위 구석 부감. 왼쪽 책상의 제보자(오른쪽 옷장에 등을 돌림), 오른쪽 침대 이불, 문 옆 옷장의 열린 틈은 '조금 더 짙은 어둠'. 5부 C072의 원판.",
+   "img": "(R3 + P1 첨부) Use R3 at night with all lights off and only faint moonlight. The narrator in a black fleece jacket stands at the left-side desk with his back toward the right side of the room, searching a drawer. The right bed has a still lump under the light gray fleece blanket, head covered. The tall wardrobe to the right of the door has one door ajar by about 15cm; inside the gap the darkness is slightly denser, a barely perceptible vertical shape that could be hanging clothes. Almost invisible.",
+   "vid": "The man at the left desk quietly rummages in the drawer and lifts out a small item. Everything else in the room, including the blanket and the wardrobe gap, remains perfectly still. The camera is completely locked off and does not move or zoom. [Static shot]",
+   "snd": "서랍, 옷 스침. 그 외 무음",
+   "tts": [
+    120.5,
+    126.5
+   ]
+  },
+  {
+   "id": "C030",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "내가 방 안을 돌아다니는 동안 룸메이트 쪽에서는 아무 소리도 들리지 않았어.",
+   "tech": [
+    "CAM-004",
+    "EDT-011",
+    "SND-012"
+   ],
+   "shot": "룸메이트 침대 미디엄. 이불이 머리까지 덮여 있다. 절대 움직이지 않는다 → 영상 대신 이미지.",
+   "img": "Medium shot of the right-side bed in a dark dorm room lit by faint moonlight through window blinds: a light gray fleece blanket covers a body-shaped lump completely including the head. Stillness. No skin visible.",
+   "vid": "(편집: 확대 없이 고정)",
+   "snd": "방 룸톤도 내려서 '죽은 정적'",
+   "tts": [
+    126.5,
+    131.9
+   ]
+  },
+  {
+   "id": "C031",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "숨소리조차 기억나지 않아.",
+   "tech": [
+    "CAM-006",
+    "CMP-019"
+   ],
+   "shot": "이불 주름·베개 끝 극근경. 달빛 띠.",
+   "img": "Extreme close-up of the folds of the light gray fleece blanket at the edge of a dark pillow, a thin band of moonlight across it from the blinds, darkness around.",
+   "vid": "(편집: 고정)",
+   "snd": "무음",
+   "tts": [
+    131.9,
+    134.0
+   ]
+  },
+  {
+   "id": "C032",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "그런데 당시에는 그게 전혀 이상하지 않았어. 자는 사람이 조용한 건 당연하다고 생각했으니까.",
+   "tech": [
+    "CAM-002"
+   ],
+   "shot": "왼쪽 벽, 내 옷장(문 뒤쪽)을 여는 뒷모습.",
+   "img": "From behind, in darkness with faint moonlight: the narrator in a black fleece jacket stands in front of his own tall wooden wardrobe on the left side near the door, one hand on its door.",
+   "vid": "The man slowly opens the wardrobe door, careful not to let the hinge creak. The camera is locked off.",
+   "snd": "경첩(작게)",
+   "tts": [
+    134.0,
+    141.0
+   ]
+  },
+  {
+   "id": "C033",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "필요한 물건을 찾은 다음에는 옷도 몇 벌 챙겼어.",
+   "tech": [
+    "ACT-008",
+    "SND-005"
+   ],
+   "shot": "옷장 선반에서 옷을 꺼내 가방에 넣는 손.",
+   "img": "Close-up in darkness: hands in black fleece sleeves taking folded T-shirts and a sweater from a wardrobe shelf, an open black backpack below.",
+   "vid": "The hands take the folded clothes and push them into the open backpack. Camera static.",
+   "snd": "천 스침",
+   "tts": [
+    141.0,
+    144.8
+   ]
+  },
+  {
+   "id": "C034",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "친구 쪽에서 조금 더 있다가 돌아올 생각이었던 것 같아.",
+   "tech": [
+    "SND-005",
+    "CAM-006"
+   ],
+   "shot": "지퍼를 아주 천천히 닫는다.",
+   "img": "Extreme close-up of a black backpack zipper half closed in faint moonlight, fingers on the zipper pull.",
+   "vid": "The fingers pull the zipper closed very slowly and evenly from left to right. Camera static.",
+   "snd": "지퍼 — 크게 들림(5부 재사용)",
+   "tts": [
+    144.8,
+    148.4
+   ]
+  },
+  {
+   "id": "C035",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "그러다가 침대 쪽을 한번 쳐다보기도 했어.",
+   "tech": [
+    "CAM-002",
+    "ACT-004"
+   ],
+   "shot": "어깨너머 — 고개를 오른쪽 침대로 돌린다. 시선은 침대로만. 열린 옷장 틈은 프레임 오른쪽 가장자리에 걸쳐 있다.",
+   "img": "Over-the-shoulder from behind the narrator standing near the left desk in darkness, looking across the room: the right bed with the blanket lump is faintly visible; the right edge of the frame includes the tall wardrobe by the door with its dark gap.",
+   "vid": "The man's head turns slowly to the right toward the bed and holds there. The camera is locked off behind his shoulder.",
+   "snd": "-",
+   "tts": [
+    148.4,
+    151.1
+   ]
+  },
+  {
+   "id": "C036",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "하지만 방 안이 너무 어두워서 침대 윤곽 정도밖에는 보이지 않았어.",
+   "tech": [
+    "CAM-001",
+    "CMP-006"
+   ],
+   "shot": "1인칭 — 침대 윤곽뿐. 프레임 오른쪽 끝에 옷장 틈. (5부 C076의 원판)",
+   "img": "First-person view from the left side of a dark dorm room toward the right bed: only the outline of the wooden bed frame and the blanket lump are readable in faint moonlight; at the right edge of the frame, the tall wardrobe by the door with one door ajar and a black gap.",
+   "vid": "(편집: 고정)",
+   "snd": "-",
+   "tts": [
+    151.1,
+    156.0
+   ]
+  },
+  {
+   "id": "C037",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "룸메이트가 실제로 거기에 누워 있는지 확인할 정도는 아니었지.",
+   "tech": [
+    "CAM-019",
+    "HOR-023"
+   ],
+   "shot": "C036 이미지로 — 초점이 풀렸다 잡혔다 (어둠 속 눈의 피로).",
+   "img": "= C036",
+   "vid": "The image slowly drifts out of focus and back into focus twice, like eyes straining in the dark. Nothing in the room moves. The camera does not move.",
+   "snd": "-",
+   "tts": [
+    156.0,
+    160.1
+   ]
+  },
+  {
+   "id": "C038",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "그렇다고 가까이 가서 볼 생각도 없었어.",
+   "tech": [
+    "ACT-013"
+   ],
+   "shot": "바닥 — 러닝화가 침대 반대쪽(문 쪽)으로 방향을 바꾼다.",
+   "img": "Ground-level shot in the dark room: gray running sneakers on dark carpet facing toward the right bed.",
+   "vid": "The feet turn away from the bed and point toward the door, then take one step. The camera is locked at floor level.",
+   "snd": "발소리 1회",
+   "tts": [
+    160.1,
+    163.2
+   ]
+  },
+  {
+   "id": "C039",
+   "part": "2",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "자는 사람 얼굴까지 확인할 이유가 없잖아.",
+   "tech": [
+    "EDT-010"
+   ],
+   "shot": "인터뷰 실루엣 정지 (C003).",
+   "img": "= C003",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    163.2,
+    166.5
+   ]
+  },
+  {
+   "id": "C040",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "나는 그냥 룸메이트가 자고 있다고 생각했고, 물건을 다 챙긴 다음 다시 문 쪽으로 갔어.",
+   "tech": [
+    "CAM-010",
+    "CMP-004"
+   ],
+   "shot": "낮은 위치에서 발을 따라 문으로. 문 아래 틈의 복도빛 한 줄이 목표점.",
+   "img": "Low shot from behind gray running sneakers walking toward a closed wooden door in a dark room; a thin line of corridor light glows under the door; the tall wardrobe stands just right of the door.",
+   "vid": "The feet walk slowly toward the door; the camera follows low behind them at a constant distance. [Tracking shot]",
+   "snd": "발소리",
+   "tts": [
+    166.5,
+    172.7
+   ]
+  },
+  {
+   "id": "C041",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "나갈 때도 불은 켜지 않았어.",
+   "tech": [
+    "ACT-009",
+    "HOR-014"
+   ],
+   "shot": "스위치 바로 옆을 지나가는 손 — 이번엔 멈추지도 않는다.",
+   "img": "= C001 첫 프레임 (스위치, 어둠)",
+   "vid": "A hand passes right in front of the switch without slowing down and reaches past it toward the door handle out of frame. The camera is completely locked off.",
+   "snd": "-",
+   "tts": [
+    172.7,
+    174.6
+   ]
+  },
+  {
+   "id": "C042",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "문 닫는 소리에 룸메이트가 깰까 봐 손잡이를 잡은 채 천천히 문을 닫았던 건 기억나.",
+   "tech": [
+    "EDT-008",
+    "CMP-007",
+    "ACT-009"
+   ],
+   "shot": "C008과 같은 구도. 복도에서 보는 닫히는 문 — 이번엔 문틈 안이 완전한 어둠.",
+   "img": "= C008 이미지를 GPT 편집: 'Edit this exact image. Keep the framing identical. Remove the roommate and all light inside the room: the gap now shows only total darkness. Add a hand in a black fleece sleeve holding the outer lever handle.'",
+   "vid": "0-5s: the door closes extremely slowly while the hand keeps holding the handle; the black gap narrows to nothing. 5-6s: the handle is released gently without a click. The camera is completely locked off. [Static shot]",
+   "snd": "걸쇠를 누른 채 닫는 소리 — 아주 작게",
+   "tts": [
+    174.6,
+    180.7
+   ]
+  },
+  {
+   "id": "C043",
+   "part": "2",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "그리고 다시 친구들이 있는 곳으로 돌아갔어.",
+   "tech": [
+    "LGT-015"
+   ],
+   "shot": "C009 바 이미지 재사용(따뜻한 색).",
+   "img": "= C009 이미지",
+   "vid": "(편집: 느린 확대)",
+   "snd": "웅성임 페이드 인",
+   "tts": [
+    180.7,
+    183.2
+   ]
+  },
+  {
+   "id": "C044",
+   "part": "2",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R5",
+   "narr": "그때까지만 해도 정말 아무 일도 없다고 생각했어. 내가 그날 밤 기숙사 방에 잠깐 다녀왔다는 사실도 금방 잊어버릴 정도였으니까.",
+   "tech": [
+    "CAM-011",
+    "HOR-001",
+    "HOR-013"
+   ],
+   "shot": "밤의 기숙사 외관. 불 꺼진 창 하나로 천천히 전진. 시청자만 불길함을 느낀다.",
+   "img": "Use R5 late at night, almost all windows dark. One dark window with closed blinds on the fourth floor is centered in the frame.",
+   "vid": "Very slow, steady push in toward the dark fourth-floor window over the whole clip. Nothing else moves. [Push in]",
+   "snd": "밤 바람 → 드론음 아주 낮게",
+   "tts": [
+    183.2,
+    193.3
+   ]
+  },
+  {
+   "id": "C045",
+   "part": "2",
+   "kind": "T",
+   "dur": "2s",
+   "ref": "-",
+   "narr": "(쉼 — TTS 사이에 2초 삽입)",
+   "tech": [
+    "EDT-022"
+   ],
+   "shot": "암전",
+   "img": "-",
+   "vid": "-",
+   "snd": "무음"
+  },
+  {
+   "id": "C046",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R5",
+   "narr": "다음 날 기숙사로 돌아왔을 때 처음으로 뭔가 이상하다는 걸 느꼈어.",
+   "tech": [
+    "LGT-016",
+    "LGT-017"
+   ],
+   "shot": "흐린 낮, 기숙사 앞 경찰차와 모인 사람들. 채도 낮춤, 경광등만 색.",
+   "img": "Use R5 on a gray overcast morning, desaturated. A police patrol car parked by the entrance with its light bar on, a small crowd of college students standing around, faces small and indistinct.",
+   "vid": "The patrol car's lights flash; students shift their weight and murmur; one walks in. The camera is locked off.",
+   "snd": "웅성임, 무전 소리",
+   "tts": [
+    193.3,
+    197.6
+   ]
+  },
+  {
+   "id": "C047",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4 + P3",
+   "narr": "우리 방이 있는 쪽에 사람들이 모여 있었고, 가까이 가보니 경찰까지 와 있었어.",
+   "tech": [
+    "CMP-016",
+    "LGT-016"
+   ],
+   "shot": "C013과 같은 복도(낮). 노란 폴리스라인이 가로지르고 경찰과 학생들.",
+   "img": "(R4 + P3 첨부) Edit the corridor image: same corridor and camera position, but in grim daylight with all lights on, desaturated. Yellow police tape is stretched across the corridor in the middle distance; two uniformed officers dressed like the reference officer and several students behind the tape, faces not in focus. The yellow tape is the only saturated color.",
+   "vid": "Students whisper to each other; an officer lifts the tape for a colleague to pass under. The camera is locked off.",
+   "snd": "웅성임, 카메라 셔터음 멀리",
+   "tts": [
+    197.6,
+    202.7
+   ]
+  },
+  {
+   "id": "C048",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "처음에는 누가 다쳤거나 무슨 사고라도 난 줄 알았지.",
+   "tech": [
+    "CAM-017",
+    "CAM-001"
+   ],
+   "shot": "1인칭 핸드헬드로 사람들 사이를 비집고 앞으로.",
+   "img": "First-person view at eye level in the crowded daylight corridor, shoulders of students blocking the view, the yellow police tape ahead.",
+   "vid": "Handheld first-person movement pushing forward slowly between students' shoulders toward the tape, slight natural sway. [Handheld]",
+   "snd": "웅성임 커짐",
+   "tts": [
+    202.7,
+    206.4
+   ]
+  },
+  {
+   "id": "C049",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P1",
+   "narr": "그런데 얼마 지나지 않아 룸메이트가 죽었다는 말을 들었어.",
+   "tech": [
+    "ACT-011",
+    "EDT-019"
+   ],
+   "shot": "검은 백팩 끈이 손가락에서 미끄러져 바닥에 떨어진다.",
+   "img": "Close-up of a hand in a black fleece jacket sleeve loosely holding the strap of a black backpack in a daylight corridor, desaturated.",
+   "vid": "0-2s: the hand is still. 2-5s: the fingers slowly loosen and the strap slips away; the backpack drops out of frame. Camera static.",
+   "snd": "가방 떨어지는 '툭' 뒤 소리가 확 줄어듦",
+   "tts": [
+    206.4,
+    210.4
+   ]
+  },
+  {
+   "id": "C050",
+   "part": "3",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "살해당한 거였어.",
+   "tech": [
+    "CMP-013",
+    "SND-012"
+   ],
+   "shot": "우리 방 문. 노란 테이프가 X자로. 방 번호는 편집 합성.",
+   "img": "Front view of a closed wooden dorm room door with a dark metal frame in a cinder block wall, sealed with yellow police tape crossed in an X, gray daylight, desaturated except the tape.",
+   "vid": "(편집: 고정)",
+   "snd": "완전 무음 → 이명 시작",
+   "tts": [
+    210.4,
+    212.2
+   ]
+  },
+  {
+   "id": "C051",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P3",
+   "narr": "처음에는 무슨 말을 하는 건지 잘 이해가 되지 않았어.",
+   "tech": [
+    "CAM-020",
+    "SND-017"
+   ],
+   "shot": "1인칭 — 말하는 경찰관(P3)의 흐릿한 모습. 목소리 먹먹.",
+   "img": "(P3 첨부) First-person view of the uniformed police officer from the reference speaking in a daylight dorm corridor, heavily out of focus, desaturated.",
+   "vid": "The blurry officer talks and gestures slightly; the image stays out of focus. Camera has a faint handheld sway.",
+   "snd": "이명 + 물속처럼 먹먹한 대사",
+   "tts": [
+    212.2,
+    216.2
+   ]
+  },
+  {
+   "id": "C052",
+   "part": "3",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "나는 바로 전날 밤 그 방에 들어갔다 나왔으니까.",
+   "tech": [
+    "EDT-016"
+   ],
+   "shot": "C042 닫히는 문 플래시.",
+   "img": "-",
+   "vid": "= C042 일부",
+   "snd": "-",
+   "tts": [
+    216.2,
+    220.2
+   ]
+  },
+  {
+   "id": "C053",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R4",
+   "narr": "그래서 당연히 내가 방을 나온 뒤에 누군가 들어온 거라고 생각했어.",
+   "tech": [
+    "HOR-011",
+    "EDT-016"
+   ],
+   "shot": "'그때 믿었던 것' — 밤 복도 끝에서 검은 형체가 걸어온다. 약간 부드러운 화질(가짜 기억).",
+   "img": "(R4 첨부) Same corridor at night, slightly soft and dreamy, lower contrast. A dark figure in black clothes and a black cap, face hidden, stands far away at the end of the corridor.",
+   "vid": "The dark figure walks slowly toward the camera and stops in front of a door on the right at 5s, reaching for the handle. The camera is locked off.",
+   "snd": "먼 발소리",
+   "tts": [
+    220.2,
+    224.2
+   ]
+  },
+  {
+   "id": "C054",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P2",
+   "narr": "내가 있었을 때는 아무 일도 없었고, 룸메이트는 그냥 자고 있었다고 믿고 있었거든.",
+   "tech": [
+    "HOR-014",
+    "HOR-022"
+   ],
+   "shot": "'믿었던 기억' — P2 시트의 잠든 자세. 어두운 방, 얼굴은 벽 쪽. 이불이 숨 쉬듯 오르내린다. 약간 따뜻하고 부드럽게.",
+   "img": "(P2 + R2 첨부) The roommate from the reference asleep on his side on the right-side bed of the dark dorm room, in the same pose as the sleeping panel, face turned toward the wall and hidden, light gray fleece blanket over his body, soft warm moonlight, dreamy.",
+   "vid": "His back and the blanket rise and fall gently and slowly with peaceful sleeping breaths. Nothing else moves. The camera is locked off.",
+   "snd": "고른 숨소리(이 영상에만 존재)",
+   "tts": [
+    224.2,
+    230.3
+   ]
+  },
+  {
+   "id": "C055",
+   "part": "3",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P3",
+   "narr": "그런데 경찰이 추정한 사망 시간을 듣고 나서 그 생각이 완전히 틀렸다는 걸 알게 됐어.",
+   "tech": [
+    "CAM-006",
+    "EDT-018"
+   ],
+   "shot": "경찰관의 손이 수첩에 시간을 적는다(글씨는 판독 불가하게).",
+   "img": "Close-up of a police officer's hand (dark navy uniform sleeve, black wristwatch) writing in a small notebook with a ballpoint pen, handwriting illegible and blurred, gray daylight.",
+   "vid": "The pen writes a short line, stops, and taps the page once. Camera static.",
+   "snd": "펜 소리, 시계 초침",
+   "tts": [
+    230.3,
+    235.7
+   ]
+  },
+  {
+   "id": "C056",
+   "part": "3",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "룸메이트는 내가 방에 들어가기 전에 이미 죽어 있었어.",
+   "tech": [
+    "EDT-013",
+    "EDT-006",
+    "SND-012"
+   ],
+   "shot": "편집: C054(숨 쉬는 모습) → 정지 프레임 → C030(이불에 덮인 움직임 없는 실제)으로 하드컷.",
+   "img": "= C054 → C030",
+   "vid": "= C054 정지",
+   "snd": "숨소리가 뚝 끊기고 무음",
+   "tts": [
+    235.7,
+    241.1
+   ]
+  },
+  {
+   "id": "C057",
+   "part": "3",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "그 말을 듣자 전날 밤의 기억이 한꺼번에 다시 떠올랐어. 불을 켜려다가 멈췄던 것, 침대 쪽에서 아무 소리도 들리지 않았던 것, 그리고 어둠 속에서 룸메이트가 자고 있을 거라고 혼자 단정했던 것까지.",
+   "tech": [
+    "EDT-012",
+    "EDT-017"
+   ],
+   "shot": "몽타주, 나레이션에 맞춰: (도입) C044 창문 → '불을 켜려다' C020 멈춘 손 → '아무 소리도' C030 이불 → '어둠 속에서' C036 침대 윤곽 → '단정했던 것까지' C042 문틈.",
+   "img": "-",
+   "vid": "= 재사용",
+   "snd": "각 컷의 원래 효과음을 짧게",
+   "tts": [
+    241.1,
+    254.9
+   ]
+  },
+  {
+   "id": "C058",
+   "part": "3",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "나는 룸메이트가 자는 모습을 본 적이 없었어.",
+   "tech": [
+    "ACT-011"
+   ],
+   "shot": "C028 인터뷰(고개 숙임) 재사용.",
+   "img": "-",
+   "vid": "= C028",
+   "snd": "-",
+   "tts": [
+    254.9,
+    260.1
+   ]
+  },
+  {
+   "id": "C059",
+   "part": "3",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R3",
+   "narr": "사실 아무것도 보지 못했지.",
+   "tech": [
+    "LGT-004"
+   ],
+   "shot": "C029 마스터 구도 정지 화면, 편집에서 블랙을 더 눌러 거의 검게.",
+   "img": "= C029 첫 프레임",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    260.1,
+    261.7
+   ]
+  },
+  {
+   "id": "C060",
+   "part": "3",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "불을 켜지 않았으니까.",
+   "tech": [
+    "EDT-011"
+   ],
+   "shot": "C001 스위치 정지(손 없음), 길게 홀드.",
+   "img": "= C001 첫 프레임",
+   "vid": "-",
+   "snd": "무음",
+   "tts": [
+    261.7,
+    265.2
+   ]
+  },
+  {
+   "id": "C061",
+   "part": "4",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P1 + P3",
+   "narr": "경찰은 내가 방에 들어갔던 시간을 확인하면서 여러 가지를 물어봤어. 이상한 소리를 들은 적이 있는지, 평소와 다른 점은 없었는지,",
+   "tech": [
+    "CAM-002",
+    "EDT-005"
+   ],
+   "shot": "조사실 — 제보자 뒷모습 어깨너머로 맞은편 경찰관(초점 밖).",
+   "img": "(P1 + P3 첨부) Over-the-shoulder from behind the narrator (messy brown hair, black fleece jacket) sitting at a gray metal table in a small police interview room, facing the uniformed officer from the reference across the table, the officer out of focus. Cold fluorescent light, desaturated.",
+   "vid": "The officer speaks and gestures with one hand, then leans back. The narrator stays still. The camera is locked off.",
+   "snd": "형광등 험, 먹먹한 대사",
+   "tts": [
+    265.2,
+    271.3
+   ]
+  },
+  {
+   "id": "C062",
+   "part": "4",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "방 안에 다른 사람이 있는 것 같은 느낌은 없었는지 계속 물었지.",
+   "tech": [
+    "HOR-003",
+    "CAM-006"
+   ],
+   "shot": "경찰관이 방 평면 스케치를 테이블 위로 밀어준다.",
+   "img": "Top-down close-up of a hand-drawn pencil floor plan of a small two-bed dorm room on white paper on a gray table: the entry door at the bottom, a tall wardrobe immediately right of the door, two desks, two beds along the side walls, a window at the top. No words, no labels, no numbers.",
+   "vid": "An officer's hand slides the paper slowly across the table toward the camera and lets go. Camera static, top-down.",
+   "snd": "종이 마찰음",
+   "tts": [
+    271.3,
+    276.0
+   ]
+  },
+  {
+   "id": "C063",
+   "part": "4",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P1",
+   "narr": "나는 전부 없었다고 대답했어.",
+   "tech": [
+    "ACT-008"
+   ],
+   "shot": "테이블 위 깍지 낀 손, 엄지가 서로를 문지른다.",
+   "img": "Close-up of a young man's hands in black fleece jacket sleeves clasped together on a gray metal table, cold light.",
+   "vid": "The thumbs rub against each other nervously, then stop. Camera static.",
+   "snd": "-",
+   "tts": [
+    276.0,
+    278.2
+   ]
+  },
+  {
+   "id": "C064",
+   "part": "4",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "정말 아무것도 몰랐거든.",
+   "tech": [],
+   "shot": "C003 인터뷰 정지.",
+   "img": "= C003",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    278.2,
+    280.5
+   ]
+  },
+  {
+   "id": "C065",
+   "part": "4",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P1 + P3",
+   "narr": "그런데 조사 과정에서 더 끔찍한 이야기를 들었어.",
+   "tech": [
+    "CAM-011",
+    "ACT-002"
+   ],
+   "shot": "C061 구도에서 천천히 전진, 흐릿한 경찰관이 앞으로 몸을 숙인다.",
+   "img": "= C061 이미지",
+   "vid": "The out-of-focus officer leans forward over the table; the camera pushes in slowly over the narrator's shoulder. [Push in]",
+   "snd": "드론음 상승",
+   "tts": [
+    280.5,
+    284.2
+   ]
+  },
+  {
+   "id": "C066",
+   "part": "4",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "경찰은 내가 방에 들어갔을 당시 범인이 아직 그 안에 있었을 가능성이 높다고 했어.",
+   "tech": [
+    "CAM-006",
+    "HOR-010"
+   ],
+   "shot": "★평면도 위 펜이 '문 바로 오른쪽 옷장'에 동그라미를 그리고 두 번 톡톡.",
+   "img": "= C062 이미지 (펜을 든 손 추가)",
+   "vid": "A pen moves to the wardrobe drawn right beside the door at the bottom of the floor plan, slowly draws a circle around it, then taps it twice. Camera static, top-down.",
+   "snd": "연필 원 그리는 소리, 톡톡",
+   "tts": [
+    284.2,
+    290.0
+   ]
+  },
+  {
+   "id": "C067",
+   "part": "4",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "처음에는 무슨 말인지 이해가 안 됐어.",
+   "tech": [],
+   "shot": "C028 인터뷰 재사용.",
+   "img": "-",
+   "vid": "= C028",
+   "snd": "-",
+   "tts": [
+    290.0,
+    292.6
+   ]
+  },
+  {
+   "id": "C068",
+   "part": "4",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "범인이 방 안에 있었다면 내가 봤어야 하는 거 아닌가 싶었지.",
+   "tech": [
+    "CAM-001",
+    "HOR-023"
+   ],
+   "shot": "C036 1인칭 침대 윤곽 정지 — 여전히 아무것도 안 보인다.",
+   "img": "= C036",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    292.6,
+    297.8
+   ]
+  },
+  {
+   "id": "C069",
+   "part": "4",
+   "kind": "T",
+   "dur": "auto",
+   "ref": "-",
+   "narr": "그러다가 깨달았어.",
+   "tech": [
+    "EDT-022",
+    "SND-012"
+   ],
+   "shot": "암전",
+   "img": "-",
+   "vid": "-",
+   "snd": "무음",
+   "tts": [
+    297.8,
+    299.3
+   ]
+  },
+  {
+   "id": "C070",
+   "part": "4",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "나는 그날 밤 불을 한 번도 켜지 않았어.",
+   "tech": [
+    "EDT-017"
+   ],
+   "shot": "C001 스위치 정지. 하단 자막: ※ 경찰 추정을 바탕으로 한 재구성 화면입니다",
+   "img": "= C001 첫 프레임",
+   "vid": "-",
+   "snd": "-",
+   "tts": [
+    299.3,
+    302.3
+   ]
+  },
+  {
+   "id": "C071",
+   "part": "5",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "방에 들어가서 책상까지 걸어가고,",
+   "tech": [
+    "CAM-002",
+    "HOR-022",
+    "CMP-007"
+   ],
+   "shot": "C023 재구성 — 같은 구도인데 전경 오른쪽 옷장 문틈 안에 초점 밖 검은 어깨와 모자. 카메라는 처음부터 옷장 속 범인 바로 옆에 있었다.",
+   "img": "= C023 이미지를 GPT 편집: 'Edit this exact image. Keep everything identical. In the out-of-focus wardrobe gap in the right foreground, add the dark shoulder and the side of a black cap of a person standing motionless inside the wardrobe, facing the doorway. Raise the exposure slightly, colder and more monochrome.'",
+   "vid": "0-3s: the silhouette in the doorway steps inside. 3-6s: he slowly closes the door; the light shrinks and disappears. The out-of-focus figure inside the wardrobe in the foreground does not move at all, not even breathing. The camera is completely locked off.",
+   "snd": "C023 소리 그대로 + 반향 (SND-016)",
+   "tts": [
+    302.3,
+    304.6
+   ]
+  },
+  {
+   "id": "C072",
+   "part": "5",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R3",
+   "narr": "물건을 찾고, 옷을 챙기고,",
+   "tech": [
+    "CAM-004",
+    "CMP-017",
+    "LGT-004",
+    "HOR-012"
+   ],
+   "shot": "★C029 재구성 — 같은 마스터 구도, 노출을 올리면 옷장 틈 안에 서 있는 사람이 보인다. 제보자는 등을 돌리고 서랍을 뒤진다.",
+   "img": "= C029 이미지를 GPT 편집 (01_연출노트 7장 문구 사용)",
+   "vid": "The man at the left desk quietly rummages in the drawer. The dark figure standing inside the gap of the wardrobe beside the door stays perfectly motionless for the whole clip; only at 4s its head turns very slightly toward the man at the desk. The camera is completely locked off and does not move or zoom. [Static shot]",
+   "snd": "C027 서랍 소리 재사용 + 반향",
+   "tts": [
+    304.6,
+    307.4
+   ]
+  },
+  {
+   "id": "C073",
+   "part": "5",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R3",
+   "narr": "다시 문을 열고 나갈 때까지 계속 어둠 속에 있었어.",
+   "tech": [
+    "CMP-015",
+    "ACT-002",
+    "CAM-004"
+   ],
+   "shot": "같은 마스터 구도 — 제보자가 문으로 걸어가 옷장 틈 바로 앞, 팔 하나 거리로 스친다. 범인은 움직이지 않는다.",
+   "img": "= C072 이미지",
+   "vid": "0-4s: the man with the backpack walks from the left desk to the door, passing within arm's reach of the motionless figure in the wardrobe gap without noticing it. 4-6s: he opens the door a little, slips out and the door closes. The figure never moves. The camera is completely locked off.",
+   "snd": "발소리, 문 — 2부 소리 재사용",
+   "tts": [
+    307.4,
+    311.5
+   ]
+  },
+  {
+   "id": "C074",
+   "part": "5",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "나는 몇 분 동안 그 방 안을 돌아다녔고, 범인은 어딘가에 숨어서 내가 들어온 사실을 알고 있었던 거야.",
+   "tech": [
+    "CMP-019",
+    "CAM-020",
+    "ACT-005",
+    "CMP-007"
+   ],
+   "shot": "옷장 문틈 — 틈 사이로 모자 챙 아래 그림자 진 턱선과 어깨만(눈·얼굴 없음). 뒤로 초점 밖 제보자가 움직인다.",
+   "img": "Close-up in near darkness of the 15cm gap of a tall wooden wardrobe door: inside the gap, only a sliver of a person's jaw and shoulder under the brim of a black cap, face in deep shadow and unreadable. In the far out-of-focus background of the dark dorm room, a man in a black fleece jacket is at a desk.",
+   "vid": "The figure inside the gap stays completely still, not even breathing. The blurred man in the background moves around the desk. Focus slowly shifts from the wardrobe gap to the background man. [Static shot]",
+   "snd": "가까운 곳의 아주 작은 숨 1회",
+   "tts": [
+    311.5,
+    318.6
+   ]
+  },
+  {
+   "id": "C075",
+   "part": "5",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2 + P1",
+   "narr": "내가 서랍을 여는 소리도, 방 안을 돌아다니는 소리도 들었겠지.",
+   "tech": [
+    "CAM-001",
+    "SND-016",
+    "HOR-013",
+    "CMP-007"
+   ],
+   "shot": "범인 시점 — 옷장 문틈 사이로 2~3m 앞 왼쪽 책상의 제보자 등.",
+   "img": "Point of view from inside a dark wardrobe looking out through a narrow vertical gap of the door: the edges of the wooden wardrobe door frame the view on both sides; beyond, about three meters away in the dark dorm room, the narrator in a black fleece jacket stands at the left-side desk with his back turned, opening a drawer, faint moonlight.",
+   "vid": "The man slowly pulls the drawer open and searches inside, never turning around. The point of view stays perfectly still. [Static shot]",
+   "snd": "서랍 소리 — 옷장 안에서 듣는 먹먹한 공간감",
+   "tts": [
+    318.6,
+    322.8
+   ]
+  },
+  {
+   "id": "C076",
+   "part": "5",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "그런데 나는 바로 옆 어딘가에 다른 사람이 있다는 것조차 모르고 있었어.",
+   "tech": [
+    "HOR-013",
+    "CMP-008"
+   ],
+   "shot": "C036 재구성 — 침대만 보던 1인칭 화면 오른쪽 끝, 옷장 틈 안에 서 있는 사람.",
+   "img": "= C036 이미지를 GPT 편집 (01_연출노트 7장 문구)",
+   "vid": "(편집: 고정)",
+   "snd": "무음",
+   "tts": [
+    322.8,
+    327.9
+   ]
+  },
+  {
+   "id": "C077",
+   "part": "6",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "그리고 경찰에게 마지막 이야기를 들었어.",
+   "tech": [],
+   "shot": "C003 인터뷰 영상 재사용.",
+   "img": "-",
+   "vid": "= C003",
+   "snd": "-",
+   "tts": [
+    327.9,
+    330.9
+   ]
+  },
+  {
+   "id": "C078",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "P3",
+   "narr": "방 안에서 글씨 하나가 발견됐다고 했어.",
+   "tech": [
+    "HOR-009",
+    "EDT-020"
+   ],
+   "shot": "경찰관이 사진 한 장을 뒤집힌 채 테이블 위로 밀어준다. 내용은 아직 안 보여준다.",
+   "img": "Close-up on a gray metal table in a police interview room: a police officer's hand (dark navy uniform sleeve, black wristwatch) placing a printed photograph face down, the white back of the photo visible.",
+   "vid": "The hand slides the face-down photo slowly across the table and keeps two fingers on it. Camera static.",
+   "snd": "종이 마찰",
+   "tts": [
+    330.9,
+    333.9
+   ]
+  },
+  {
+   "id": "C079",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "내가 그날 밤 불을 켰다면 볼 수 있었을 곳에",
+   "tech": [
+    "HOR-014",
+    "ACT-009"
+   ],
+   "shot": "★C001 변주 — 이번엔 손가락이 스위치를 누른다(상상).",
+   "img": "= C001 첫 프레임",
+   "vid": "0-2s: a hand enters from the left and reaches the switch. 2-3s: the finger flips the switch up firmly. 3-6s: cool white light floods over the wall and the switch. The camera is completely locked off.",
+   "snd": "'딸깍' → 형광등 '팅…팅…'",
+   "tts": [
+    333.9,
+    336.8
+   ]
+  },
+  {
+   "id": "C080",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R2",
+   "narr": "이런 문장이 적혀 있었다고 해.",
+   "tech": [
+    "LGT-010",
+    "LGT-012"
+   ],
+   "shot": "문간 1인칭 — 천장 형광등이 깜빡이다 켜지며 방이 드러난다(R2 → 불 켠 방). 창 아래 벽은 아직 빈 벽.",
+   "img": "= R2 (밤, 문간) — 첫 프레임",
+   "vid": "The ceiling light flickers twice and then turns fully on, revealing the whole room in flat white light. The camera is completely locked off.",
+   "snd": "형광등 점등음",
+   "tts": [
+    336.8,
+    339.1
+   ]
+  },
+  {
+   "id": "C081",
+   "part": "6",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R1-lit",
+   "narr": "“불을 켜지 않아서 다행이지?”",
+   "tech": [
+    "EDT-011",
+    "HOR-004",
+    "LGT-002"
+   ],
+   "shot": "★불 켜진 방 정면 — 창 아래 블록벽에 손글씨 '불을 켜지 않아서 다행이지?'(편집 합성). 오른쪽 침대 이불은 그대로. 스팅어 없이 무음. 나레이션이 끝나도 2초 더 홀드.",
+   "img": "Use R1-lit (night, ceiling light on). The right bed has the still lump under the light gray fleece blanket with the head covered. The bare cinder block wall below the window is empty (text will be added in editing).",
+   "vid": "(편집: 고정 + 글씨 합성)",
+   "snd": "형광등 험만",
+   "tts": [
+    339.1,
+    341.1
+   ]
+  },
+  {
+   "id": "C082",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R3",
+   "narr": "그 말을 듣고 나서야 내가 그날 밤 어떤 상황에 있었는지 제대로 이해했어.",
+   "tech": [
+    "CMP-015",
+    "LGT-002",
+    "ACT-012"
+   ],
+   "shot": "★클라이맥스 — 창가에서 문 쪽을 본 불 켜진 방. 스위치 바로 옆 옷장이 15cm 열려 있고 그 틈에 범인이 서 있다. 얼굴은 모자 그림자.",
+   "img": "(R3 첨부) Same room, eye level from near the window looking toward the entry door, ceiling light on, harsh flat white light. The tall wardrobe immediately right of the door has one door open about 15cm, and standing inside the gap is a motionless adult in black clothes and a black cap, face entirely in the shadow of the cap brim, no weapon visible. The light switch on the wall between the door frame and the wardrobe is within arm's reach of the gap.",
+   "vid": "The figure stays completely still. Only the ceiling light flickers once at 3s. The camera is completely locked off. [Static shot]",
+   "snd": "형광등 험, 한 번 깜빡일 때 '지직'",
+   "tts": [
+    341.1,
+    346.5
+   ]
+  },
+  {
+   "id": "C083",
+   "part": "6",
+   "kind": "I",
+   "dur": "auto",
+   "ref": "R1-lit",
+   "narr": "룸메이트는 이미 죽어 있었고, 범인은 내가 방 안에 들어왔다는 걸 알고 있었어.",
+   "tech": [
+    "CAM-004",
+    "LGT-002"
+   ],
+   "shot": "밝은 빛 아래 오른쪽 침대, 이불이 머리까지. 잔혹 묘사 없음.",
+   "img": "Medium shot of the right-side bed under harsh ceiling light: the light gray fleece blanket covers a body-shaped lump entirely including the head, perfectly still. Clean, no blood, nothing graphic.",
+   "vid": "(편집: 고정)",
+   "snd": "-",
+   "tts": [
+    346.5,
+    352.3
+   ]
+  },
+  {
+   "id": "C084",
+   "part": "6",
+   "kind": "R",
+   "dur": "auto",
+   "ref": "R7",
+   "narr": "만약 내가 평소처럼 아무 생각 없이 스위치를 눌렀다면 어떻게 됐을지는 지금도 생각하고 싶지 않아.",
+   "tech": [
+    "LGT-011",
+    "EDT-022",
+    "EDT-017"
+   ],
+   "shot": "불이 꺼지듯 암전 → C001 스위치 앞에서 멈춘 손(현실)으로 복귀.",
+   "img": "-",
+   "vid": "= C001 (4~10초 구간)",
+   "snd": "소등 '딸깍' → 무음",
+   "tts": [
+    352.3,
+    359.1
+   ]
+  },
+  {
+   "id": "C085",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R6",
+   "narr": "그날 내가 불을 켜지 않은 건 뭔가 이상한 낌새를 느꼈기 때문이 아니었어.",
+   "tech": [
+    "ACT-004",
+    "HOR-024"
+   ],
+   "shot": "인터뷰 실루엣이 고개를 돌려 옆 벽의 스위치를 본다.",
+   "img": "= C003 이미지 (R6의 스위치가 보이는 구도)",
+   "vid": "The silhouetted man slowly turns his head toward the light switch on the side wall and holds the gaze. The camera is locked off.",
+   "snd": "인터뷰 룸톤",
+   "tts": [
+    359.1,
+    364.5
+   ]
+  },
+  {
+   "id": "C086",
+   "part": "6",
+   "kind": "V",
+   "dur": "auto",
+   "ref": "R1-day",
+   "narr": "그냥 잠들어 있는 룸메이트를 깨우고 싶지 않았던 것뿐이야.",
+   "tech": [
+    "LGT-002",
+    "CAM-011",
+    "HOR-024"
+   ],
+   "shot": "현재의 빈 방 — 낮, 매트리스만 남은 침대 두 개, 아무것도 없는 벽. 문과 스위치 쪽으로 천천히 전진하다 암전 → 엔딩 카드. 나레이션이 끝난 뒤에도 이어지다(10초 클립) 암전된다.",
+   "img": "Use R1-day composition reversed: from near the window looking toward the door, bright daylight, the room completely emptied: two bare mattresses, empty desks, the wardrobe beside the door closed, nothing on the walls. Calm, bright, silent.",
+   "vid": "Very slow push in toward the door, the light switch and the closed wardrobe beside it over the whole clip. Nothing moves. Dust particles drift in the sunlight. [Push in]",
+   "snd": "바깥 새소리 작게 → 암전 무음",
+   "tts": [
+    364.5,
+    368.4
+   ],
+   "gen": 10
+  },
+  {
+   "id": "C087",
+   "part": "6",
+   "kind": "T",
+   "dur": "6s",
+   "ref": "-",
+   "narr": "(없음)",
+   "tech": [
+    "EDT-022"
+   ],
+   "shot": "엔딩 카드: '이 이야기는 제보(커뮤니티 게시글)를 바탕으로 각색되었습니다 · 원작: (출처/작성자) · 일부 화면은 AI로 생성된 재구성입니다'",
+   "img": "-",
+   "vid": "-",
+   "snd": "무음 → 채널 엔딩 사운드"
+  }
+ ],
+ "tts_total": 368.4
 }
